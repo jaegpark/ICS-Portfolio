@@ -59,8 +59,8 @@
       <br>
       <p>
         <pre>
-          yourDataTypeHere [] theNameOfTheArray;
-          yourDataTypeHere theNameOfTheArray [];
+          yourDataTypeHere [] theNameOfTheArrayReference;
+          yourDataTypeHere theNameOfTheArrayReference [];
         </pre>
         Although both ways work, note that the first method is often preferred to make code look cleaner.
       </p>
@@ -68,7 +68,50 @@
       <h3>Instantiating</h3>
       <br>
       <p>
+        To instantiate an array in Java, you must create an array using the "new" operator. As well,
+        you will need to specify the size of the array. Note that in Java, you cannot alter the size
+        of an array directly.
+      </p>
+      <br>
+      <p>
+        There is also an alternate form of creating a new array. This method involves listing every element
+        inside a list, separated by commas, surrounded by braces {}. Note: the data types of each element must
+        be consistent. The following are examples of the two ways to create an array:
+      </p>
+      <p>
+        <br>
+        <pre>
+          // 1
+          arrayDataType [] theNameOfTheArrayReference = new arrayDataType[sizeOfArray];
+          // this will create a new array "new arrayDataType[sizeOfArray]"
+          // this will make the reference varaible, theNameOfTheArrayReference, point
+          //    to the newly made array in computer memory
 
+          //2
+          arrayDataType[] theNameOfTheArrayReference2 = {element1, element2, ... elementn};
+          // this will do the exact same thing as method 1.
+          // this method is often used when there is a pre-made list that is to be used in the program.
+        </pre>
+      </p>
+      <br>
+      <p>
+        Let's look at a few real life demos. Here, I'm going to make 3 different arrays.
+        <ul>
+          <li>an array of Strings, length of 10</li>
+          <li>an array of doubles, length of 15</li>
+          <li>an array of characters, length of 3, given pre-set values of 'A', 'B', 'C'</li>
+        </ul>
+      </p>
+      <br>
+      <p>
+        <pre>
+          //1
+          String [] stringArray = new String[10];
+          //2
+          double [] doubleArray = new double[15];
+          //3
+          char [] charArray = {'A','B','C'};
+        </pre>
       </p>
     </article>
 
