@@ -263,11 +263,58 @@
     <br>
     <p>
       In essence, you could treat an ArrayList as an array, but with enhanced capabilities.
-      Some of these include a dynamic size, easier-to-use methods,
+      Some of these include a dynamic size and practical methods. Overall, you can look at them
+      as dynamic arrays.
     </p>
     <br>
     <p>
 
+    </p>
+    <br>
+    <h3>Declaration</h3>
+    <br>
+    <p>
+      The declaration of an ArrayList is slightly different than an array. Like an array,
+      it is advised to specify the type of data the ArrayList would hold.
+    </p>
+    <br>
+    <p>
+      Looking at the ArrayList class' heirarchy tree, you could call
+    </p>
+    <br>
+    <p>
+      <pre>
+        <code>
+
+        </code>
+      </pre>
+    </p>
+    <h3>Instantiation</h3>
+    <br>
+    <p>
+      To instantiate an ArrayList, like an array, the "new" keyword must be used. This creates a new
+      ArrayList object. The ArrayList class has 3 different constructors: a default constructor, a constructor
+      that takes in an int to set the initial size, and a constructor that takes in another that takes in
+      a Collection of the same or subclass data types of the elements of the ArrayList.
+    </p>
+    <br>
+    <p>
+      <pre>
+        <code>
+          // this first method of creating an ArrayList constructs an empty ArrayList with an
+          //  initial capacity of size 10.
+          ArrayList< Datatype > nameOfList1 = new ArrayList< >();
+
+          // the second method of creating an ArrayList contructs an ArrayList of a given size,
+          //  in its parameters.
+          ArrayList< Datatype > nameOfList2 = new ArrayList< >(initialCapacity);
+
+          // the third method of creating an ArrayList constructs an ArrayList from a passed in
+          //  Collection or any of its subclasses, of a data type which is a subclass of the data type
+          //  of the ArrayList.
+          ArrayList< Datatype > nameOfList3 = new ArrayList< >(Collection <? extends Datatype> c);
+        </code>
+      </pre>
     </p>
     </article>
 
