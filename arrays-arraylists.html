@@ -34,6 +34,7 @@
 
   <main>
     <br><br>
+    <!--START OF ARRAYS-->
     <h2>Arrays</h2>
     <br><hr><br>
     <article>
@@ -74,23 +75,25 @@
       </p>
       <br>
       <p>
-        There is also an alternate form of creating a new array. This method involves listing every element
+        As well, there is also an alternate form of creating a new array. This method involves listing every element
         inside a list, separated by commas, surrounded by braces {}. Note: the data types of each element must
         be consistent. The following are examples of the two ways to create an array:
       </p>
       <p>
         <br>
         <pre>
-          // 1
+          <code>
+          // 1 - using the new operator
           arrayDataType [] theNameOfTheArrayReference = new arrayDataType[sizeOfArray];
           // this will create a new array "new arrayDataType[sizeOfArray]"
           // this will make the reference varaible, theNameOfTheArrayReference, point
           //    to the newly made array in computer memory
 
-          //2
+          //2 - using a given list
           arrayDataType[] theNameOfTheArrayReference2 = {element1, element2, ... elementn};
-          // this will do the exact same thing as method 1.
+          // this will do the exact same thing as method 1 for the array object
           // this method is often used when there is a pre-made list that is to be used in the program.
+        </code>
         </pre>
       </p>
       <br>
@@ -105,14 +108,156 @@
       <br>
       <p>
         <pre>
+          <code>
           //1
           String [] stringArray = new String[10];
           //2
           double [] doubleArray = new double[15];
           //3
           char [] charArray = {'A','B','C'};
+        </code>
         </pre>
       </p>
+      <br>
+      <h3>Traversal</h3>
+      <br>
+      <p>
+        In Java, an element/value inside an array is accessed using the following syntax: theNameOfTheArrayReference[index],
+        which holds the value of the element at the integer index. Note: indicies in Java arrays start at 0, meaning
+        the first element in an array would be arrayReference[0] and the last element would be arrayReference[arrayReference.length-1].
+      </p>
+      <br>
+      <p>Note that attempting to access an array of an index that is out of bounds will cause Java to throw
+      an ArrayIndexOutOfBoundsException. For example, if the array length is set as 5, accessing array[5] or above, or array[-1] or below,
+      will throw ArrayIndexOutOfBoundsException.
+      </p>
+      <br>
+      <p>
+        Before we move on, let's touch quickly on what the .length is.
+      </p>
+      <br>
+      <p>
+        In Java, the arrays contain an attribute/field called length. You may have encountered a similar
+        length() method when you learned about Strings.
+      </p>
+      <br>
+      <h4>.length vs .length()</h4>
+      <br>
+      <p>
+        When using the method length() for Strings, an accessor method is called in the Stirng class, and returns the value of the String
+        object’s length (in characters). (.length) however, directly accesses the final variable value of the array size. Since an array’s
+        length can never be changed after initialization, the length variable can be exposed and accessible without any unwanted side effects.
+      </p>
+      <br>
+      <p>
+        The following is a class which demonstrates summing up all the elements inside an integer array.
+      </p>
+      <br>
+      <p>
+        <pre>
+          <code>
+          public class SumExemplar{
+
+            public static void main(String [] args){
+              int [] listOfNumbers = {1, 2, 3, 4, 10};
+              int total = 0;
+
+              // sums up all the elements
+              for(int i = 0; i < listOfNumbers.length; i++){
+                total += listOfNumbers[i];
+              }
+
+              System.out.println(total + " is the sum of all the numbers");
+            }
+          }
+        </code>
+        </pre>
+      </p>
+      <br><br>
+      <h3>The foreach loop</h3>
+      <br>
+      <p>
+        The foreach loop, or otherwise called an enhanced for loop, is a form of for loop
+        that sequentilly traverses an array, without the need of an index variable. The following
+        is an example program that outputs the values inside an array of integers.
+      </p>
+      <br>
+      <p>
+        <pre>
+          <code>
+            public class ForeachTest{
+              public static void main(String [] args){
+                int [] list = {1,2,3,4,5};
+                for(int value : list){  // the int value is assigned to the next sequential element inside the array
+                  System.out.println(value):
+                }
+              }
+            }
+          </code>
+        </pre>
+      </p>
+      <br>
+      <p>
+        It is important to note, that foreach loops cannot alter the original contents of the array, without other
+        helper methods. For example, the following code will NOT change the original array:
+      </p>
+      <br>
+      <p>
+        <pre>
+          <code>
+            public class Foreachdemo{
+              public static void main(String [] args){
+                int [] list = {1,2,3,4,5};
+                for(int value:list){
+                  value +=2;  // attempts to increase each elements value by 2
+                }
+
+                // output the original array
+                for(int i = 0; i< list.length-1; i++){
+                  System.out.println(list[i]);
+                }
+              }
+            }
+          </code>
+        </pre>
+      </p>
+    </article>
+
+    <!--START OF ARRAYLISTS-->
+    <br><br>
+    <h2>ArrayLists</h2>
+    <br><hr><br>
+    <article>
+      <h3>Brief Overview</h3>
+      <br>
+      <p>
+        Once you have mastered arrays, ArrayLists should come very easily for you.
+      </p>
+      <br>
+      <p>
+        In Java, ArrayLists come from a part of the java.util class library.
+        To use ArrayLists in a program, at the very top (before the class), you must use the
+        following import statement:
+      </p>
+      <br>
+      <p>
+        <pre>
+          <code>
+            import java.util.ArrayList;
+            // alternatively,
+            import java.util.*;
+          </code>
+        </pre>
+      </p>
+    <br>
+    <p>
+      In essence, you could treat an ArrayList as an array, but with enhanced capabilities.
+      Some of these include a dynamic size, easier-to-use methods,
+    </p>
+    <br>
+    <p>
+
+    </p>
     </article>
 
   </main>
