@@ -34,7 +34,7 @@
 
   <main>
     <h2>OOP - Object Oriented Programming</h2>
-    <br><hr><br>
+    <br><hr><br><br>
     <article>
       <h3>What is OOP in Java?</h3>
       <br>
@@ -42,7 +42,7 @@
         OOP, or Object Oriented Programming, is a style of programming that involves the manipulation of Objects and their attributes/behaviours.
         This style of programming was based on the real life world. This makes Java a very convinient programing language to use for many applications.
       </p>
-      <br>
+      <br><hr><br><br>
       <h3>Objects and Classes</h3>
       <br>
       <p>
@@ -68,42 +68,147 @@
           String breed;
 
           void meow(){
-
+            // code for meow method here
           }
 
           void eat(){
-
+            // code for eat method here
           }
 
           void drink(){
-
+            // code for drink method here
           }
         }
         </code>
       </pre>
       <br><br>
     </article>
-    <!--constructors -->
+    <!-- methods -->
     <article>
-      <h3></h3>
+      <h3>Methods</h3>
+      <br><hr><br>
+      <h4>What are they?</h4>
       <br>
       <p>
+        In Java, a method is a block of code which is only run when the method is called. In other languages/words,
+        methods can sometimes be called functions. Often times, methods are designed to do specific tasks within a
+        program. Together with other methods, they allow the program to run properly.
+      </p>
+      <br>
+      <p>
+        As well, in Java, methods can be given parameters (data passed into a method). We will touch on this later.
+      </p>
+      <br>
+      <p>
+        It is important to note that in Java, methods cannot be written by themselves. They MUST be written inside a class.
+        Methods are defined by a name, followed by a set of parantheses().
+        Although Java brings in default libraries which contain a multitude of classes and their methods, often times, programmers
+        program their own methods, to do exactly what they want.
+      </p>
+      <br>
+      <p>
+        For example, let's look at a creation of a method called "calculate" inside the class Demo.
+        <pre>
+          <code>
+            public class Demo{
+              void calculate(){
+                // code for method goes here.
+              }
+            }
+          </code>
+        </pre>
+      </p>
+      <br>
+      <p>
+        You may have noticed the void keyword there in front of the method name. Don't worry, all that means for now
+        is that the method has no return value. 
+        Additionally, just keep in mind that the keyword static means that the method belongs to this class. More about
+        these keywords will be touched upon later.
+      </p>
+      <br>
+      <h4>Parameters</h4>
+      <br>
+      <p>
+        It was mentioned before under Methods, that data could be passed into a method through parameters.
+        Essentially, a parameter is a piece of information that is passed into an array. These parameters are
+        declared inside the parantheses. There is no limit to the number of parameters you can have
+        inside a method. Just make sure that they are all separated with commas.
+        It is advised though to minimize the number of parameters, for the sake of program
+        clarity.
+      </p>
+      <br>
+      <p>
+        Let's look at this example here. In this method called "add", we will have two int parameters.
+        The method will output the value of the sum of these two numbers.
+      </p>
+      <br>
+      <p>
+        <code>
+        <pre>
+          public class Demo1{
+            static void add(int firstNumber, int secondNumber){
+              System.out.println(firstNumber+secondNumber);
+            }
 
+            public static void main(Stirng[] args){
+              add(5, 2);  // will call the add method with the firstNumber parameter value of 5, and secondNumber value of 2.
+                          // this will print the value of 7.
+            }
+          }
+        </pre>
+      </code>
+      </p>
+      <br>
+      <h4>Return Types</h4>
+      <br>
+      <p>
+        In the examples you've seen so far, you have seen the keyword void be used multiple times. What does that
+        really mean though? In Java, methods have certain return types. The void keyword indicates that the method
+        does not actually return anything. To have a method return a value, whether it be an Object or primitive data,
+        all you need to do is add the name of the Object's class or the primitive data name in the method header.
+        Remember, all return-type methods MUST contain the keyword "return" inside the method. This must be reachable,
+        regardless of the code inside the method.
+      </p>
+      <br>
+      <p>
+        Note: a return method does not actually output anything! To print something returned by a return-method,
+        a print statement is often called to the return value of the method.
+      </p>
+      <br>
+      <p>
+        Let's look at this example: this is similar code to the Demo1 class. The method add takes in two ints to add,
+        and returns the value of their sum.
+      </p>
+      <br>
+      <p>
+        <code>
+          <pre>
+            public class Demo2{
+              static int add(int firstNumber, int secondNumber){
+                return (firstNumber+secondNumber);
+              }
+
+              public static void main(String [] args){
+                System.out.println(add(2, 3));
+              }
+            }
+          </pre>
+        </code>
       </p>
       <br><br>
     </article>
-    <!-- methods -->
+    <!--constructors -->
     <article>
-      <h3></h3>
+      <h3>Constructors</h3>
       <br>
       <p>
-
+        Constructors
       </p>
       <br><br>
     </article>
     <!-- mutator/accessor methods -->
     <article>
-      <h3></h3>
+      <h3>Mutator/accessor methods</h3>
       <br>
       <p>
 
@@ -112,16 +217,7 @@
     </article>
     <!-- instance variables -->
     <article>
-      <h3></h3>
-      <br>
-      <p>
-
-      </p>
-      <br><br>
-    </article>
-    <!--parameters-->
-    <article>
-      <h3></h3>
+      <h3>Instance variables</h3>
       <br>
       <p>
 
@@ -130,7 +226,7 @@
     </article>
     <!--encapsulation-->
     <article>
-      <h3></h3>
+      <h3>Encapsulation</h3>
       <br>
       <p>
 
@@ -139,7 +235,7 @@
     </article>
     <!--casting-->
     <article>
-      <h3></h3>
+      <h3>Casting</h3>
       <br>
       <p>
 
@@ -148,7 +244,7 @@
     </article>
     <!--interface-->
     <article>
-      <h3></h3>
+      <h3>Interface</h3>
       <br>
       <p>
 
@@ -157,7 +253,7 @@
     </article>
     <!-- abstract classes -->
     <article>
-      <h3></h3>
+      <h3>Abstract classes</h3>
       <br>
       <p>
 
@@ -166,7 +262,7 @@
     </article>
     <!--inheritance-->
     <article>
-      <h3></h3>
+      <h3>Inheritance</h3>
       <br>
       <p>
 
@@ -175,7 +271,7 @@
     </article>
     <!-- heirarchy trees -->
     <article>
-      <h3></h3>
+      <h3>Heirarchy trees</h3>
       <br>
       <p>
 
@@ -184,7 +280,7 @@
     </article>
     <!-- downcasting/upcasting -->
     <article>
-      <h3></h3>
+      <h3>Downcasting/upcasting</h3>
       <br>
       <p>
 
