@@ -275,20 +275,31 @@
     <br>
     <p>
       The declaration of an ArrayList is slightly different than an array. Like an array,
-      it is advised to specify the type of data the ArrayList would hold.
+      it is advised to specify the type of data the ArrayList would hold. This is indicated within the
+      < > symbols. It is important to note that ArrayLists CANNOT directly hold primitive data types
+      (e.g. int, float, long, char, etc.).
     </p>
     <br>
     <p>
-      Looking at the ArrayList class' heirarchy tree, you could call
+      Luckily, there are things in Java called wrapper classes,
+      which are often used to help with indirectly dealing with primitive data types. For example, the
+      Java.lang.Integer wrapper class is a class for the primitive type int. When handling ArrayLists or any class
+      which extends the List interface, the data type specified in < > is the name of the corresponding wrapper
+      class.
     </p>
     <br>
     <p>
       <pre>
         <code>
+          ArrayList < E > nameOfArrayListObject;
+          // where E is the data type
 
+          // ex1. An ArrayList of Integers
+          ArrayList< Integer > integerArrayList;
         </code>
       </pre>
-    </p>
+    <p>
+    <br><br>
     <h3>Instantiation</h3>
     <br>
     <p>
@@ -315,6 +326,26 @@
           ArrayList< Datatype > nameOfList3 = new ArrayList< >(Collection <? extends Datatype> c);
         </code>
       </pre>
+    </p>
+    <br>
+    <p>
+      Additionally, looking at the ArrayList class' heirarchy tree, you could call ArrayLists
+      generically as a List. Lets look at this example:
+    </p>
+    <br>
+    <p>
+      <pre>
+        <code>
+          List < Integer > list1 = new ArrayList< >();
+          ArrayList < Integer > list2 = new ArrayList< >();
+        </code>
+      </pre>
+    </p>
+    <br>
+    <p>
+      It turns out that these are doing the same thing, by instantiating a new ArrayList.
+      However, there is a distinct difference between these two methods.
+      In
     </p>
     </article>
 
