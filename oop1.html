@@ -120,8 +120,8 @@
       </p>
       <br>
       <p>
-        You may have noticed the void keyword there in front of the method name. Don't worry, all that means for now
-        is that the method has no return value. 
+        You may have noticed the "void" keyword there in front of the method name. Don't worry, all that means for now
+        is that the method has no return value.
         Additionally, just keep in mind that the keyword static means that the method belongs to this class. More about
         these keywords will be touched upon later.
       </p>
@@ -134,7 +134,8 @@
         declared inside the parantheses. There is no limit to the number of parameters you can have
         inside a method. Just make sure that they are all separated with commas.
         It is advised though to minimize the number of parameters, for the sake of program
-        clarity.
+        clarity. Remember, a method call will be invalid unless all parameter values have been passed in, IN CHRONOLOGICAL
+        ORDER.
       </p>
       <br>
       <p>
@@ -162,7 +163,7 @@
       <h4>Return Types</h4>
       <br>
       <p>
-        In the examples you've seen so far, you have seen the keyword void be used multiple times. What does that
+        In the examples you've seen so far, you have seen the keyword "void" be used multiple times. What does that
         really mean though? In Java, methods have certain return types. The void keyword indicates that the method
         does not actually return anything. To have a method return a value, whether it be an Object or primitive data,
         all you need to do is add the name of the Object's class or the primitive data name in the method header.
@@ -197,12 +198,46 @@
       </p>
       <br><br>
     </article>
+    <!--encapsulation-->
+    <article>
+      <h3>Encapsulation</h3>
+      <br>
+      <p>
+        In Java, there are keywords that can specify "visibility/accessibility." When declaring a class, you may have
+        noticed that we include the keyword "public." In Java, this means that the class is accessible by other classes,
+        which may want to use its Objects. Think of it as a shield which prevents code from outside the class from
+        accessing the data inside it.
+      </p>
+      <br>
+      <p>
+        For common convention, it is often the case where instance variables are not accessable
+        by outside the class. Instead, these fields are accessed using methods declared in the same class.
+        These methods are often called mutator/accessor methods. We will discuss this later.
+      </p>
+      <br>
+      <p>
+       Keywords in Java include:
+       <br><br>
+        <ul>
+          <li>public: this indicates it is accessable from anywhere within the same local file.</li>
+          <li>private this indicates that it is only accessable within the class. </li>
+          <li>protected: this indicates that it is only accessable within the same class heirarchy.</li>
+        </ul>
+      </p>
+      <br>
+      <p>
+        
+      </p>
+      <br><br>
+    </article>
     <!--constructors -->
     <article>
       <h3>Constructors</h3>
       <br>
       <p>
-        Constructors
+        Constructors are special methods inside classes, which help with the instantiation of an object
+        of its class. They are declared without a specified return type, and can have parameters passed in.
+
       </p>
       <br><br>
     </article>
@@ -218,15 +253,6 @@
     <!-- instance variables -->
     <article>
       <h3>Instance variables</h3>
-      <br>
-      <p>
-
-      </p>
-      <br><br>
-    </article>
-    <!--encapsulation-->
-    <article>
-      <h3>Encapsulation</h3>
       <br>
       <p>
 
