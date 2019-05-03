@@ -196,11 +196,22 @@
           </pre>
         </code>
       </p>
+      <!-- mutator/accessor methods -->
+      <h4>Mutator/accessor methods</h4>
+      <br>
+      <p>
+        In classes, special methods are used that are usually named getSOMETHING() and setSOMETHING().
+        These methods are called getters/setters, or accessor/mutator methods. These, in convention,
+        are used to return/change the values of a class' attributes. These attributes are usually unable
+        to be directly accessed by outer classes. This will be explained further under encapsulation.
+      </p>
       <br><br>
     </article>
     <!--encapsulation-->
     <article>
       <h3>Encapsulation</h3>
+      <br><hr><br>
+      <h4>What are they?</h4>
       <br>
       <p>
         In Java, there are keywords that can specify "visibility/accessibility." When declaring a class, you may have
@@ -226,7 +237,37 @@
       </p>
       <br>
       <p>
-        
+        Let's look at an example of fully encapsulating a class:
+      </p>
+      <br>
+      <p>
+        <pre>
+          <code>
+            public class Person{
+              private String name;
+              private int age;
+
+              public int getAge(){
+                return age;
+              }
+              public String getName(){
+                return name;
+              }
+              public void setAge(int newAge){
+                age = newAge;
+              }
+              public void setName(String newName){
+                name = newName;
+              }
+            }
+          </code>
+        </pre>
+      </p>
+      <br>
+      <p>
+        This allows the methods, getAge(), getName(), setAge(), and setName() to be used in
+        other classes in the same file. The instance variables name and age will not be
+        able to be directly used in outer classes.
       </p>
       <br><br>
     </article>
@@ -236,20 +277,36 @@
       <br>
       <p>
         Constructors are special methods inside classes, which help with the instantiation of an object
-        of its class. They are declared without a specified return type, and can have parameters passed in.
-
+        of its class. They are declared without a specified return type, and can have parameters passed in. They
+        must be named after their Class name, and there can be many constructors inside a class, as long as
+        they have different parameter values.
       </p>
-      <br><br>
-    </article>
-    <!-- mutator/accessor methods -->
-    <article>
-      <h3>Mutator/accessor methods</h3>
       <br>
       <p>
+        Often, constructors have passed in parameters that help set the values of the attribute of the Object.
+        Let's take a look at an example of a few constructors.
+      </p>
+      <br>
+      <p>
+        <pre>
+          <code>
+            public class Student{
+              private String name;
+              private long studentNumber;
+              private double average;
+              private int lockerNumber;
 
+              public Student(){
+                name = "";
+              }
+
+            }
+          </code>
+        </pre>
       </p>
       <br><br>
     </article>
+
     <!-- instance variables -->
     <article>
       <h3>Instance variables</h3>
