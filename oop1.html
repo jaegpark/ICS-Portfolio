@@ -178,7 +178,7 @@
               public static void main(Stirng[] args){
                 add(5, 2);  // will call the add method with the firstNumber parameter value of 5, and secondNumber value of 2.
                             // this will print the value of 7.
-                        }
+              }
             }
           </code>
         </pre>
@@ -187,8 +187,18 @@
       <h4><u>Passing into methods</u></h4>
       <br>
       <p>
-
+        In Java, there are two ways to pass parameters into a method: pass by value and pass by reference.
       </p>
+      <br>
+      <ul>
+        <li>
+          Pass by value: pass by value is when the method parameter values are copied to another variable. This new variable is then passed,
+          ultimately not altering the
+        </li>
+        <li>
+          Pass by reference: this is when a reference pointer is passed into the method,  
+        </li>
+      </ul>
       <br>
       <h4><u>Return Types</u></h4>
       <br>
@@ -257,7 +267,7 @@
               private String name;
               private long studentNumber;
               private int lockerNumber;
-              public Student(){
+              public Student(){   // this is the default constructor - it has no arguments/parameters passed in.
               }
               public Student(String studentName, long studentNum){
                 name = studentName;
@@ -272,6 +282,11 @@
             }
           </code>
         </pre>
+      </p>
+      <br>
+      <p>
+        It is important to note that Java, by default, will create a default no argument constructor in case it was
+        not made in the class already. This is done to avoid compiling errors.
       </p>
       <br><br>
     </article>
@@ -465,7 +480,6 @@
             dog1.feed();
           </code>
         </pre>
-        <br>
         will run without error. To find the feed() method, Java, during runtime, will go through the object's class' heirarchy to
         look for the first method found with the same name. If one is not found, a SOMETHINGSOMETHING exception will be thrown.
       </p>
@@ -501,8 +515,8 @@
         <li>Abstract classes will OR will not contain abstract methods. As a side note, abstract methods in abstract classes
         are written without a code body block. For example: (public void doSomething();), would be how the method actually looks like
         inside an abstract class.</li>
-        <li>Abstract classes cannot be instantiated by itself.</li>
-        <li>To use an abstract class, it must be inherited by another non-abstract class, which will implement its methods.</li>
+        <li>Abstract classes cannot be instantiated by itself, to create objects. </li>
+        <li>To use an abstract class, it must be inherited by another non-abstract class, which will need to implement its methods.</li>
         <li>If an abstract class is extended, all of its abstract methods must be implemented.</li>
       </ul>
       <br><br>
@@ -513,7 +527,41 @@
       <h3>Interfaces</h3>
       <br><hr><br>
       <p>
+        In Java, another way to achieve abstraction is by using interfaces. Interfaces are essentially FULL abstract classes.
+        All of its variables and methods are by default, abstract. Here are the key takeaways:
+      </p>
+      <br>
+      <ul>
+        <li>Methods inside interfaces are all abstract, and by default public.</li>
+        <li>Variables in interfaces are public, static, and final. </li>
+        <li>Interfaces cannot be instantiated by itself, to create objects. </li>
+        <li>Interfaces cannot contain contructors.</li>
+        <li>To use an interface, it must be implemented inside another class (using the keyword "implements"), which will need to implement all of its methods.</li>
+      </ul>
+      <br>
+      <p>
+      Let's look at an example of an interface being implemented:
+      <pre>
+          <code>
+            public interface Pet{
+              public void makeNoise();
+              public void eat();
+            }
 
+            public class Dog implements Pet{
+              public void makeNoise(){
+                System.out.println("Woof");
+              }
+            }
+
+            public class Driver{
+              public static void main(String [] args){
+                Dog newDog = new Dog();   // default Dog object created
+                newDog.makeNoise();
+              }
+            }
+          </code>
+        </pre>
       </p>
       <br><br>
     </article>
@@ -523,6 +571,8 @@
       <h3>Heirarchy trees</h3>
       <br><hr><br>
       <p>
+        When describing class relationships in Java, there is a very useful diagram to use, called a class heirarchy tree.
+        In heirarchy trees, classes are surrounded by rectangles, and have arrows demonstrating their relationships with each other.
 
       </p>
       <br><br>
