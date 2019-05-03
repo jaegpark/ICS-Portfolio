@@ -483,8 +483,28 @@
       <br><hr><br>
       <p>
         In Java, there is a keyword "abstract" which can be applied to methods, variables, and even entire classes.
-        The abstract keyword indicates that you are dealing with 
+        The abstract keyword indicates that you are dealing with an <i> idea </i>, rather than an actual <i>events.</i>
       </p>
+      <br>
+      <p>
+        When speaking about OOP, classes, methods, and variables are usually abstracted to hide the code implementation from
+        the user. In OOP, there are two ways you can achieve abstraction: through abstract classes or through an interface.
+        In this section, we will handle abstract classes.
+      </p>
+      <br>
+      <p>
+        An abstract class can easily be identified if it contains the keyword "abstract" in the class declaration. In Java,
+        abstract classes will have the following properties:
+      </p>
+      <br>
+      <ul>
+        <li>Abstract classes will OR will not contain abstract methods. As a side note, abstract methods in abstract classes
+        are written without a code body block. For example: (public void doSomething();), would be how the method actually looks like
+        inside an abstract class.</li>
+        <li>Abstract classes cannot be instantiated by itself.</li>
+        <li>To use an abstract class, it must be inherited by another non-abstract class, which will implement its methods.</li>
+        <li>If an abstract class is extended, all of its abstract methods must be implemented.</li>
+      </ul>
       <br><br>
     </article>
 
