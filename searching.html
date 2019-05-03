@@ -32,5 +32,128 @@
     </nav>
   </header>
 
+  <main>
+    <h2>Searching</h2>
+    <br><hr><br>
+    <article>
+      <p>
+        <h3>Intro</h3>
+        <br><hr><br>
+        From what you've been taught in Java, there are many ways that one could make a list of items. But what if I needed to find
+        a specific item in the list? In the future, you will most likely encounter such scenarios. In this tutorial, I am going to
+        teach you two forms of searching: binary and sequential search.
+      </p>
+    </article>
+    <br>
+    <article>
+      <h3>Sequential Search</h3>
+      <br><hr><br>
+      <p>
+        Sequential search, as complex as it may sound, is actually probably one of the first ways of searching you will think of.
+        Sequential search is when you loop through each element of the list, left to right or right to left, to see if the current
+        element is equal to the one we are looking for.
+      </p>
+      <br>
+      <p>
+        Lets look at an example of two boolean methods that will perform sequential search. They will be passed in an int array to look through, as well
+        as a target value it searches for. They will return true if a matching number has been found. Else, they will return false.
+        Note that the only difference between these two methods is that one will use a foreach loop to perform the search, while the other
+        will use a regular array traversal.
+        <br>
+        <pre>
+          <code>
+            public class Sequentialsearchdemo{
+
+              // using a foreach loop
+              public boolean binarySearch1(int [] array, int target){
+                for(int element : array){
+                  if (element == target){
+                    return true;
+                  }
+                }
+                return false;
+              }
+
+              // using a regular for loop
+              public boolean binarySearch2(int [] array, int target){
+                for(int i = 0; i< array.length; i++){
+                  if (array[i] == target){
+                    return true;
+                  }
+                }
+                return false;
+              }
+
+              // using a while loop
+              public boolean binarySearch3(int [] array, int target){
+                int index = 0;
+                while(index < array.length){
+                  if (array[index]==target){
+                    return true;
+                  }
+                  index++;
+                }
+                return false;
+              }
+
+              // driver method
+              public static void main (String [] args){
+                int [] testList1 = {1,2,3,4,5};
+                int [] testList2 = {11, 12, 13, 14, 511};
+                int [] testList3 = {-121,-122,100, -123, 4};
+                System.out.println(binarySearch1(testList1, 4));    // will output true since 4 is an element inside testList1.
+                System.out.println(binarySearch2(testList2, 100));  // will output false since 100 is not an element in testList2.
+                System.out.println(binarySearch3(testList3, -123)); // will output true since -123 is an element inside testList3.
+              }
+            }
+          </code>
+        </pre>
+      </p>
+      <br>
+      <p>
+        It is important to note that we are using the == comparator here, instead of the .equals() method. This is because we were dealing
+        with relatively simple primitive values. Here is a more generic method demonstration, that goes through a list of Comparable objects.
+      </p>
+      <br>
+      <p>
+        <pre>
+          <code>
+            public class Genericsequentialdemo{
+
+              public boolean genericSequentialSort(Comparable [] items, Comparable target){
+                for(Comparable currElement : items){
+                  if (target.equals(currElement)) return true;
+                }
+                return false;
+              }
+
+              public static void main(String [] args){
+                Comparable [] stringArray = {"hi", "my", "name", "is", "jae"};
+                Comparable [] integerList = {1,2,3,4,5,6,7};
+
+                System.out.println(genericSequentialSort(stringArray, "jae"));  // will output true since "jae" is an element.
+                System.out.println(genericSequentialSort(integerList, 9));      // will output false since 9 is not an element.
+              }
+            }
+          </code>
+        </pre>
+      </p>
+      <br>
+      <p>
+        See? Not that hard! Now, as you can tell, this can be very inefficient when going through large sets of data. Generally,
+        you would use a sequential search when you are dealing with randomized/non-sorted lists. If the list is sorted, there are other
+        more efficient ways of dealing with them. Let's take a look.
+      </p>
+      <br><br>
+    </article>
+    <article>
+      <h3>Binary Search</h3>
+      <br><hr><br>
+      <p>
+        Binary search, only works on lists that are sorted in some decreasing or increasing order.
+      </p>
+    </article>
+  </main>
+
 </body>
 </html>
