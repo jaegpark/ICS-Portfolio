@@ -40,14 +40,17 @@
       <br><hr><br>
       <p>
         In Java, there are a countless number of ways one could sort a list of items. In this tutorial, I will introduce
-        4 different ways to sort a list of values. These 4 techniques are called selection sort, insertion sort, merge sort, and
-        radix sort.
+        3 different ways to sort a list of values. These 3 techniques are called selection sort, merge sort, and
+        radix sort. As well, I will show each sort's pros and cons, as well as when they should be used.
       </p>
       <br>
       <p>
         For the sake of a tutorial, I will only be explaining things for sorting into ascending order. Lets start!
       </p>
       <br>
+      <br>
+    </article>
+    <article>
       <h3>Selection Sort</h3>
       <br><hr><br>
       <p>
@@ -63,12 +66,35 @@
             public class Selectionsortdemo{
 
               public void sort(int [] array){
-                
+                for(int i = 0; i < array.length-1; i++){  // traverse through array
+
+                  int minimumIndex = i;       // location of the current smallest element in the unsorted array
+                  for(int j = i+1; j < array.length-1; j++){  // loops through the unsorted part of the array, starting at index i+1
+                    if (array[j] < array[minimumIndex]){    // if a smaller value than our current minimum is found,
+                      minimumIndex = j;                     // we set the value of our new current minimum's index to j
+                    }
+                  }
+
+                  // swap the local minimum in the unsorted part with the element at i.
+                  int temp = array[minimumIndex];
+                  array[minimumIndex] = array[i];
+                  array[i] = temp;
+                }
+              }
+
+              public static void main(String [] args){
+                int [] list1 = {0,-10,100,20,53,10,100};
+                sort(list1);
+
+                for(int element: list1){
+                  System.out.println(element);
+                }
               }
             }
           </code>
         </pre>
       </p>
+      <br>
     </article>
 
   </main>
