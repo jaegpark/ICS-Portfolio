@@ -65,7 +65,7 @@
             public class Sequentialsearchdemo{
 
               // using a foreach loop
-              public boolean binarySearch1(int [] array, int target){
+              public boolean sequentialSearch1(int [] array, int target){
                 for(int element : array){
                   if (element == target){
                     return true;
@@ -75,7 +75,7 @@
               }
 
               // using a regular for loop
-              public boolean binarySearch2(int [] array, int target){
+              public boolean sequentialSearch2(int [] array, int target){
                 for(int i = 0; i< array.length; i++){
                   if (array[i] == target){
                     return true;
@@ -85,7 +85,7 @@
               }
 
               // using a while loop
-              public boolean binarySearch3(int [] array, int target){
+              public boolean sequentialSearch3(int [] array, int target){
                 int index = 0;
                 while(index < array.length){
                   if (array[index]==target){
@@ -155,7 +155,45 @@
         Essentially, a binary serach looks at the element in the middle of the list, and checks whether this is the element we are looking for. If not, it
         decides whether the value we are looking for exists in right-half (is a larger value), or the left-half (is a smaller value).
         After determining this, it redirects our attention to the half we have determined, and checks the middle element of that smaller list.
+        This "checking middle, process middle" step repeats in an iterative manner, until the target has been found.
+      </p>
+      <br>
+      <p>
+        Lets look at an iterative example code below, where we will look for the index of a target int inside an array of ints:
+      </p>
+      <br>
+      <p>
+        <pre>
+          <code>
+            public class BinarySearchDemo{
 
+              // This method returns the index of the target if it is found in array. Else, it returns -1.
+              public int binarySearchIterative(int [] array, int target){
+                int leftIndex = 0, rightIndex = array.length-1;
+                while(leftIndex <= rightIndex){
+                  int middleIndex = leftIndex + (rightIndex-1)/2;
+
+                  if (array[middleIndex]==target) return middleIndex;
+
+                  if (array[middleIndex]< target) leftIndex = middleIndex+1;
+                  else rightIndex = middleIndex-1;
+                }
+                return -1;
+              }
+
+              public static void main(String [] args){
+                int [] testArray = {1,2,3,4,10,20,100};
+                System.out.println("The index of the element " + 2 + " is at " + binarySearchIterative(testArray, 2));
+              }
+            }
+          </code>
+        </pre>
+      </p>
+      <br>
+      <p>
+        As you can tell, this method of traversing and searching through a list is much more efficient, since it doesn't actually check
+        every element like a sequential search. The key takeaway here is that binary search is very effient at searching for elements
+        inside large, sorted lists.
       </p>
     </article>
   </main>
