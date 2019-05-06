@@ -614,9 +614,72 @@
       <h4><u>What is it?</u></h4>
       <br>
       <p>
-        When you learned about inheritance, you may have realized in the shown example that you could call a Dog a Pet,
-        similarly, a Cat a Pet. 
+        When you learned about inheritance, you may have realized in the shown example that you could call an instance of Dog a Pet,
+        similarly, an instance of Cat a Pet. It is this ability for objects to take on many forms/names, which we call polymorphism.
       </p>
+      <br>
+      <p>
+        The general rule of thumb to determine if something is polymorphic, is to see if it has more than one "is-a" relationship
+        with other classes. Technically, in Java, all objects extend the Object class, so every object in Java is polymorphic (is-a relationship
+        with itslef, and with Object).
+      </p>
+      <br>
+      <p>
+        When using methods of a polymorphic class, Java will take the first method it can find in runtime in its class heirarchy. Let's
+        look at an example below:
+      </p>
+      <br>
+      <p>
+        <pre>
+          <code>
+            public class Toy{
+              public void makeNoise(){
+                System.out.println("The toy made a noise!");
+              }
+            }
+
+            public class Racecar extends Toy{
+              public void makeNoise(){
+                System.out.println("The car went vroom!");
+              }
+            }
+
+            public class PoliceCar extends Toy{
+              public void makeNoise(){
+                System.out.println("The police car went bee-woo-bee-woo!");
+              }
+            }
+
+            public class Driver1{
+              public static void main(String [] args){
+                Toy toy1 = new Toy();
+                Toy toy2 = new Racecar();
+                Toy toy3 = new PoliceCar();
+
+                toy1.makeNoise();
+                toy2.makeNoise();
+                toy3.makeNoise();
+              }
+            }
+          </code>
+        </pre>
+        <br>
+        <p>
+          It turns out that the output for this code is:
+          <br>
+          The toy made a noise!
+          <br>
+          The car went vroom!
+          <br>
+          The police car went bee-woo-bee-woo!
+        </p>
+      </p>
+      <br>
+      <p>
+        In conclusion, we can say that the action the makeNoise() method performed was based on the type of object
+        it was called on. It is an example of polymorphism, because 
+      </p>
+
       <br><br>
     </article>
     <!-- heirarchy trees -->
@@ -638,7 +701,7 @@
         This story is one where the TDSB must make a blueprint design for the future construction of their high schools.
       </p>
       <p>
-        In this guide, you will find that sections are separated by yellow, and red blocks. These indicate their
+        In this guide, you will find that sections are separated by green, yellow, and red blocks. These indicate their
         levels of resemblance to how an actual program would be written, where red is the actual cold, yellow is the
         pseudocode, and green is in plain English. You can find it here:
       </p>
