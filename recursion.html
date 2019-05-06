@@ -32,5 +32,65 @@
     </nav>
   </header>
 
+  <main>
+    <article>
+      <h2>Recursion</h2>
+      <br><hr><br>
+      <p>
+        In Java, recursion is the repeated application of a certain method. In essence, when the method is called once, the method
+        calls itself again until a certain base condition has been met. These methods are called recursive methods/functions.
+        Recursion is often used in programming to write cleaner, shorter, and more efficient code.
+      </p>
+      <br>
+      <p>
+        In this tutorial, I will be explaining what base cases are, tail recursion, and a few examples.
+      </p>
+      <br>
+      <h3>Base Cases</h3>
+      <br>
+      <p>
+        In a recursive method, there is always a condition that must be met so that the method will not call itself forever!
+        This is called the base case, and it often involves the passed in parameters reaching a certain point.
+      </p>
+      <br>
+      <h3>Stack Tracing</h3>
+      <p>
+
+      </p>
+      <br>
+      <h3>Tail Recursion </h3>
+      <br>
+      <p>
+
+      </p>
+      <br>
+      <h3>Mutual Recursion</h3>
+      <br>
+      <p>
+
+      </p>
+      <br>
+      <h3>Example: Factorial</h3>
+      <br>
+      <p>
+        <pre>
+          <code>
+            public class FactorialDemo{
+              public static long factorial (int n){
+                if (n==1) return 1;
+                else
+                  return n * factorial(n-1);
+              }
+
+              public static void main (String [] args){
+                System.out.println(factorial(5)); // this outputs 120
+              }
+            }
+          </code>
+        </pre>
+      </p>
+    </article>
+
+  </main>
 </body>
 </html>
