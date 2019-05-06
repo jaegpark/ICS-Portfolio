@@ -70,7 +70,7 @@
             public class Sequentialsearchdemo{
 
               // using a foreach loop
-              public boolean sequentialSearch1(int [] array, int target){
+              public static boolean sequentialSearch1(int [] array, int target){
                 for(int element : array){
                   if (element == target){
                     return true;
@@ -80,7 +80,7 @@
               }
 
               // using a regular for loop
-              public boolean sequentialSearch2(int [] array, int target){
+              public static boolean sequentialSearch2(int [] array, int target){
                 for(int i = 0; i< array.length; i++){
                   if (array[i] == target){
                     return true;
@@ -90,7 +90,7 @@
               }
 
               // using a while loop
-              public boolean sequentialSearch3(int [] array, int target){
+              public static boolean sequentialSearch3(int [] array, int target){
                 int index = 0;
                 while(index < array.length){
                   if (array[index]==target){
@@ -125,7 +125,7 @@
           <code>
             public class Genericsequentialdemo{
 
-              public boolean genericSequentialSort(Comparable [] items, Comparable target){
+              public static boolean genericSequentialSort(Comparable [] items, Comparable target){
                 for(Comparable currElement : items){
                   if (target.equals(currElement)) return true;
                 }
@@ -173,7 +173,7 @@
             public class BinarySearchDemo{
 
               // This method returns the index of the target if it is found in array. Else, it returns -1.
-              public int binarySearchIterative(int [] array, int target){
+              public static int binarySearchIterative(int [] array, int target){
                 int leftIndex = 0, rightIndex = array.length-1;
                 while(leftIndex <= rightIndex){
                   int middleIndex = leftIndex + (rightIndex-1)/2;
