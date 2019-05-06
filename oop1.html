@@ -34,75 +34,87 @@
   <main>
     <h2>OOP - Object Oriented Programming</h2>
     <br><hr><br><br>
+    <h3>What is OOP in Java?</h3>
+    <br>
+    <p>
+      OOP, or Object Oriented Programming, is a style of programming that involves the manipulation of Objects and their attributes/behaviours. There
+      are 4 fundamental principles within OOP: inheritance, abstraction, encapsulation, and polymorphism. In this tutorial, I will guide you through
+      these 4 principles, with code examples in between. But to start, it is important to get the fundamental concepts such as classes, objects, and
+      methods properly set. Let's begin.
+    </p>
+    <br><hr><br><br>
     <article>
-      <h3>What is OOP in Java?</h3>
-      <br>
-      <p>
-        OOP, or Object Oriented Programming, is a style of programming that involves the manipulation of Objects and their attributes/behaviours.
-        This style of programming was based on the real life world. This makes Java a very convinient programing language to use for many applications.
-      </p>
-      <br><hr><br><br>
       <h3>Objects and Classes</h3>
       <br>
       <h4><u>What are they?</u></h4>
       <br>
       <p>
-        Objects in Java have unique states/attributes and behaviours. For example, a cat object would have states/attributes such as a name, breed, and colour, and would have
+        To get an understanding of objects in Java, let's first see what an object is in real life. Think of some real word objects.
+        Cats, dogs, cars, humans, pencils... so many more! If we think about it, all of these objects have a state and behaviour.
+        We can then think of objects in Java similarly. These objects in Java store their states in variable fields, and store their
+        behaviours into blocks of codes called methods.
+      </p>
+      <br>
+      <p>
+        For example, a cat object would have states such as a name, breed, and colour, and would have
         behaviours such as meowing, eating, and drinking. Such objects, in Java, come from instances of Classes...
       </p>
       <br>
       <p>
-        So what is a class?
+        Wait, what is a class?
       </p>
       <br>
       <p>
         Classes in Java are like blueprints/templates on how to build an Object. It would define the basic attributes that each instance of itself would contain.
-        For example, a Cat class would have attributes/instance variables of breed, colour, and name, and have behaviours/methods of meowing, eating, and drinking.
+        For example, a Cat class would have attributes/variables of breed, colour, and name, and have behaviours/methods of meowing, eating, and drinking.
         The following would be a template of a Cat class.
       </p>
       <br>
-      <pre>
-        <code>
-          public class Cat{
-            String name;
-            String colour;
-            String breed;
+      <p>
+        <pre>
+          <code>
+            public class Cat{   // note that it is a convention to capitalize names of classes, and camel-case all names.
+              String name;
+              String colour;
+              String breed;
 
-            void meow(){
-              // code for meow method here
-            }
+              void meow(){
+                // code for meow method here
+              }
 
-            void eat(){
-              // code for eat method here
-            }
+              void eat(){
+                // code for eat method here
+              }
 
-            void drink(){
-              // code for drink method here
+              void drink(){
+                // code for drink method here
+              }
             }
-          }
-        </code>
-      </pre>
+          </code>
+        </pre>
+      </p>
       <br>
       <h4><u>Variables inside classes</u></h4>
       <br>
       <p>
+        We just learned that the states of objects are stored inside variables.
         In Java classes, there are three types of variables that can be found:
       </p>
       <br>
       <ul>
         <li><b>Local variables</b> : these are varaibles which are declared inside a method. They are called
-        local, since the data/memory allocated for this variable will be removed from the stack,
+        local, since the data/memory allocated for this variable will be removed from the stack (a place in memory),
         once the method has finished execution.
         </li>
         <br>
-        <li><b>Instance varaibles</b> : these are variables which are declared within a class, but not a method.
-        These are intialized during class instantiation, or in other words, when an Object of the class is made.
+        <li><b>Instance varaibles</b> : these are variables which are declared within a class, but not within a method.
+        These are intialized during class instantiation, or in other words, when an instance of the class is made.
         These variables are also sometimes called global variables, since they are accessable by any method inside
         the same class.
         </li>
         <br>
         <li><b>Class/static variables</b> : these are varaibles declared within a class, outside any method, with the "static"
-        keyword. These variables, unlike instance varaibles, do not require an object of the class to be made before interaction.
+        keyword. These variables, unlike instance varaibles, do not require an object of the class to be made before using it.
         </li>
       </ul>
       <br><br>
@@ -114,13 +126,10 @@
       <h4><u>What are they?</u></h4>
       <br>
       <p>
-        In Java, a method is a block of code which is only run when the method is called. In other languages/words,
-        methods can sometimes be called functions. Often times, methods are designed to do specific tasks within a
+        In Java, a method is a block of code which is only run when the method is called. In other programming languages,
+        methods can sometimes be called functions or procedures. Often times, methods are designed to do specific tasks within a
         program. Together with other methods, they allow the program to run properly.
-      </p>
-      <br>
-      <p>
-        As well, in Java, methods can be given parameters (data passed into a method). We will touch on this later.
+        Additionally, in Java, methods can be given parameters (data passed into a method) to manipulate. We will touch on this later.
       </p>
       <br>
       <p>
@@ -131,7 +140,7 @@
       </p>
       <br>
       <p>
-        For example, let's look at a creation of a method called "calculate" inside the class Demo.
+        For example, let's look at a method header of a method called "calculate" inside the class Demo.
         <pre>
           <code>
             public class Demo{
@@ -145,14 +154,12 @@
       <p>
         You may have noticed the "void" keyword there in front of the method name. Don't worry, all that means for now
         is that the method has no return value.
-        Additionally, just keep in mind that the keyword static means that the method belongs to this class. More about
-        these keywords will be touched upon later.
       </p>
       <br>
       <h4><u>Parameters</u></h4>
       <br>
       <p>
-        It was mentioned before under Methods, that data could be passed into a method through parameters.
+        It was mentioned before that data could be passed into a method through "parameters."
         Essentially, a parameter is a piece of information that is passed into an array. These parameters are
         declared inside the parantheses. There is no limit to the number of parameters you can have
         inside a method. Just make sure that they are all separated with commas.
@@ -208,10 +215,10 @@
       <p>
         In the examples you've seen so far, you have seen the keyword "void" be used multiple times. What does that
         really mean though? In Java, methods have certain return types. The void keyword indicates that the method
-        does not actually return anything. To have a method return a value, whether it be an Object or primitive data,
-        all you need to do is add the name of the Object's class or the primitive data name in the method header.
-        Remember, all return-type methods MUST contain the keyword "return" inside the method. This must be reachable,
-        regardless of the code inside the method.
+        does not actually return anything. To have a method return a value, whether it be an object or primitive data,
+        all you need to do is add the name of the datatype's name in the method header.
+        Remember, all return-type methods MUST contain the keyword "return" inside the method. This return statement
+        must be reachable, regardless of the code inside the method.
       </p>
       <br>
       <p>
@@ -249,17 +256,41 @@
         to be directly accessed by outer classes. This will be explained further under encapsulation.
       </p>
       <br>
+      <p>
+        Let's look at an example:
+      </p>
+      <br>
+      <p>
+        <pre>
+          <code>
+            public class Demo3{
+              String name;
+
+              public void setName(String n){
+                name = n;           // this sets the Demo3 classes name attribute to a new String value passed in as a parameter
+              }
+
+              public String getName(){
+                return name;        // this method returns the value of the name attribute
+              }
+            }
+          </code>
+        </pre>
+      </p>
+      <br>
       <!--constructors -->
       <h4><u>Constructors</u></h4>
       <br>
       <p>
         Constructors are special methods inside classes, which help with the instantiation of an object
-        of its class. They are declared without a specified return type, and can have parameters passed in. They          must be named after their Class name, and there can be many constructors inside a class, as long as
-        they have different parameter values.
+        of its class. They are declared without a specified return type, and can have parameters passed in. They
+        must be named after their Class name, and there can be many constructors inside a class, as long as
+        they have different parameter values. This concept of having multiple methods named the same thing is
+        called "overloading" methods.
       </p>
       <br>
       <p>
-        Often, constructors have passed in parameters that help set the values of the attribute of the Object.
+        Often, constructors have passed in parameters that help set the values of the attributes/states of the Object.
         Let's take a look at an example of a few constructors.
       </p>
       <br>
@@ -270,13 +301,17 @@
               private String name;
               private long studentNumber;
               private int lockerNumber;
+
               public Student(){   // this is the default constructor - it has no arguments/parameters passed in.
+                    // initially, if this constructor is used, all of the instance's/object's attributes are pointed to null.
               }
-              public Student(String studentName, long studentNum){
+
+              public Student(String studentName, long studentNum){  // this constructor takes in two attribute fields
                 name = studentName;
                 studentNumber = studentNum;
               }
-              public Student(String studentName, long studentNum, int locker){
+
+              public Student(String studentName, long studentNum, int locker){  // this constructor takes in all attribute fields
                 name = studentName;
                 studentNumber = studentNum;
                 lockerNumber = locker;
@@ -299,24 +334,30 @@
       <h4><u>What is it?</u></h4>
       <br>
       <p>
-        In Java, there are keywords that can specify "visibility/accessibility." When declaring a class, you may have
-        noticed that we include the keyword "public." In Java, this means that the class is accessible by other classes,
-        which may want to use its Objects. Think of it as a shield which prevents code from outside the class from
-        accessing the data inside it.
+        In Java, there are keywords that can specify "visibility/accessibility" of something. When declaring a class, you may have
+        noticed that we include the keyword "public." In Java, this means that the class is accessible by other classes in the same
+        file location, which may want to use it to create objects. Think of encapsulation as a shield which controls what code from
+        outside the class can access the data inside it.
       </p>
       <br>
       <p>
-        For common convention, it is often the case where instance variables are not accessable
-        by outside the class. Instead, these fields are accessed using methods declared in the same class.
-        These methods are often called mutator/accessor methods. We will discuss this later.
+        For common convention, it is often the case where instance variables are not accessable publicly/
+        by outside the class. Instead, these are private fields, and are accessed using public methods written
+        in the same class. You saw these earlier: the mutator/accessor methods.
       </p>
       <br>
       <p>
-       Keywords in Java include:
+        The reason for keeping fields private is to avoid unwanted external code from disrupting their values.
+        However, note that there are other cases where other levels of encapsulation are desired. In Java, there
+        are three different levels of encapsuation:
+      </p>
+      <br>
+      <p>
+       They are achieved thorugh keywords:
        <br><br>
         <ul>
-          <li>public: this indicates it is accessable from anywhere within the same local file.</li>
-          <li>private this indicates that it is only accessable within the class. </li>
+          <li>public: this indicates that it is accessable from anywhere within the same local file.</li>
+          <li>private this indicates that it is only accessable within the class itself. </li>
           <li>protected: this indicates that it is only accessable within the same class heirarchy.</li>
         </ul>
       </p>
@@ -349,7 +390,8 @@
       <p>
         This allows the methods, getAge(), getName(), setAge(), and setName() to be used in
         other classes in the same file. The instance variables name and age will not be
-        able to be directly used in outer classes.
+        able to be directly used in outer classes. The only way of modifying these values of the
+        object would be to use these mutator methods.
       </p>
       <br><br>
     </article>
@@ -359,7 +401,7 @@
       <h3>Inheritance</h3>
       <br><hr><br>
       <p>
-        In Java, a class can have a direct relationship with another class, by extending. Using the extends keyword,
+        In Java, a class can have a direct relationship with another class, by extending it. Using the extends keyword,
         a class can extend another class, inheriting all of its attributes and behaviours (its varaibles and methods).
         This is what we call inheritance. This is useful when creating many classes that will interact with each other in
         a full program. Let's look at an example below:
@@ -493,10 +535,12 @@
       <br><br>
     </article>
 
-    <!-- abstract classes -->
+    <!-- abstraction -->
     <article>
-      <h3>Abstract classes</h3>
+      <h3>Abstraction</h3>
       <br><hr><br>
+      <h4><u>What is it?</u></h4>
+      <br>
       <p>
         In Java, there is a keyword "abstract" which can be applied to methods, variables, and even entire classes.
         The abstract keyword indicates that you are dealing with an <i> idea </i>, rather than an actual <i>events.</i>
@@ -505,9 +549,9 @@
       <p>
         When speaking about OOP, classes, methods, and variables are usually abstracted to hide the code implementation from
         the user. In OOP, there are two ways you can achieve abstraction: through abstract classes or through an interface.
-        In this section, we will handle abstract classes.
       </p>
       <br>
+      <h4><u>Abstract Classes</u></h4>
       <p>
         An abstract class can easily be identified if it contains the keyword "abstract" in the class declaration. In Java,
         abstract classes will have the following properties:
@@ -521,13 +565,8 @@
         <li>To use an abstract class, it must be inherited by another non-abstract class, which will need to implement its methods.</li>
         <li>If an abstract class is extended, all of its abstract methods must be implemented.</li>
       </ul>
-      <br><br>
-    </article>
-
-    <!--interfaces-->
-    <article>
-      <h3>Interfaces</h3>
-      <br><hr><br>
+      <h4><u>Interfaces</u></h4>
+      <br>
       <p>
         In Java, another way to achieve abstraction is by using interfaces. Interfaces are essentially FULL abstract classes.
         All of its variables and methods are by default, abstract. Here are the key takeaways:
@@ -568,6 +607,10 @@
       <br><br>
     </article>
 
+    <!-- Inheritance -->
+    <article>
+
+    </article>
     <!-- heirarchy trees -->
     <article>
       <h3>Heirarchy trees</h3>
