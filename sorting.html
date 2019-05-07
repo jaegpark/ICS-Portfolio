@@ -39,8 +39,7 @@
       <br><hr><br>
       <p>
         In Java, there are a countless number of ways one could sort a list of items. In this tutorial, I will introduce
-        3 different ways to sort a list of values. These 3 techniques are called selection sort, merge sort, and
-        radix sort. As well, I will show each sort's pros and cons, as well as when they should be used.
+        the radix sorting algorithm.
       </p>
       <br>
       <p>
@@ -50,45 +49,147 @@
       <br>
     </article>
     <article>
-      <h3>Selection Sort</h3>
+      <h3>Radix Sort</h3>
       <br><hr><br>
+      <h4><u>Overview</u></h4>
+      <br>
       <p>
-        In selection sort, the list of values are repeatedly looped through to find the minimum value in the unsorted part,
-        putting it into the beginning. It is important to remember that during this sort, there will be two subarrays constantly
-        changing: the sorted subarray, and the remaining parts of the array to be sorted.
+        Radix sort is non-comparative integer sorting algorithm, which compares each bit value of stored elements.
+        The radix sort algorithm has two variants: the LSD (least significant digit) and the MSD (most significant digit) sorting methods.
+        For both methods, the concept is the same: we sort the numbers into what we call "buckets" based on their digit place value, starting from
+        the left for MSD, and the right for LSD.
+        We then sort these buckets further down, by looking at the following digit place value and so on. In the end, we are left with the
+        sorted array.
+      </p>
+      <br>
+      <h4><u>Efficiency</u></h4>
+      <br>
+      <p>
+        Thinking about this concept, you can see that we loop through the list of numbers, k times, where k is the largets number of
+        digits in any element. This means that the time complexity, denoted by big O, is O(kn), where n is the number of elements.
+        This gives radix sort a near linear time sorting efficiency.
       </p>
       <br>
       <p>
-        Let's take a look at the code implementation. I will show you what each line means:
+        It is also important to note that radix sort is a non-comparative sort. What this means is that the computer will not actually check
+        which of any two elements is larger. Instead, it just sorts the numbers based on digits.
+        This makes it, fundamentally on the basic level, faster than other comparative sorting algorithms,
+        such as bubble sort.
+      </p>
+      <br>
+      <p>
+        Radix sort's memory usage
+      </p>
+      <br>
+      <h4><u>Applications</u></h4>
+      <br>
+      <p>
+        Although theoretically efficient, often times, radix sort’s linear time is an idealistic time complexity.
+        Usually, its efficiency is in the O((n+b)*logb(k)) time, where k is the largest number in the array.
+        This is pretty much the same as other O(nlog(n)) sorts’ time complexities. Hence, it is not always advantageous.
+        Furthermore, other O(nlogn) sorts such as quicksort, are more implementable to different types of data,
+        while radix sort is limited to an element’s binary representation (usually integers or other numbers).
+      </p>
+      <br>
+      <p>
+        As well, it takes and uses lots of memory, as both LSD and MSD are implemented recursively (often),
+        and also because all radix implementations require secondary arrays to store bucket/digit lists.
+      </p>
+      <br>
+      <p>
+        This is why you probably won't be seeing a practical usage of radix sort in the real world. However, there are
+        still possible applications. . Currently, it is often implemented in parallel processing machines,
+        since they are capable of handling many processes together. This allows nodes on the same processor to work
+        together without necessary synchronization, unlike other recursive sorts.
+      </p>
+      <br>
+      <p>
+        Let's take a look at the code implementation of the MSD sort.
         <pre>
           <code>
-            public class Selectionsortdemo{
+            public class mostSignificant
+            {
+              int[] numbers = {1, 421, 34, 57, 2, 92, 514};
+              int maxDigits;
 
-              public static void sort(int [] array){
-                for(int i = 0; i < array.length-1; i++){  // traverse through array
+              public mostSignificant () //
+              {
+                  maxDigits = 0;
+              }
 
-                  int minimumIndex = i;       // location of the current smallest element in the unsorted array
-                  for(int j = i+1; j < array.length-1; j++){  // loops through the unsorted part of the array, starting at index i+1
-                    if (array[j] < array[minimumIndex]){    // if a smaller value than our current minimum is found,
-                      minimumIndex = j;                     // we set the value of our new current minimum's index to j
-                    }
+              public void msdRadixSort ()
+              {
+                  int largestNum = numbers[0];
+
+                  //find largest number in array
+                  for (int x = 1; x < numbers.length; x++)
+                  {
+
+                      largestNum = Math.max (largestNum, numbers [x]);
                   }
 
-                  // swap the local minimum in the unsorted part with the element at i.
-                  int temp = array[minimumIndex];
-                  array[minimumIndex] = array[i];
-                  array[i] = temp;
-                }
+                  //find number of digits
+                  while (largestNum / (int) Math.pow (10, maxDigits) > 0)
+                  {
+                      maxDigits++;
+                  }
+
+                  numbers = sortArray (numbers, maxDigits - 1);
+                  //output ordered array
+                  for (int x = 0; x < numbers.length; x++)
+                  {
+                      System.out.println (numbers [x]);
+                  }
               }
 
-              public static void main(String [] args){
-                int [] list1 = {0,-10,100,20,53,10,100};
-                sort(list1);
+              public int[] sortArray (int[] numArray, int exponentOfTen)
+              {
+                  int[][] bucket = new int [10][numArray.length]; //stores elements sorted into buckets
+                  int[] newNumArray = new int[numArray.length]; //stores elements of original array in different order
+                  int newArrayIndex = numArray.length - 1;
+                  int bucketIndex;
+                  int digit;
 
-                for(int element: list1){
-                  System.out.println(element);
+                  if (exponentOfTen >= 0)
+                  {
+                    //check for digits 0-9 in ascending order
+                    for (int x = 0; x <= 9; x++)
+                    {
+                      bucketIndex = 0;
+                      //loop through array elements
+                      for (int index = 0; index < numArray.length; index++)
+                      {
+                        digit = (numArray [index] / (int) Math.pow (10, exponentOfTen)) % 10;
+                        //add number to new array if its digit at a certain position is equal to the digit being looked for
+                        if (digit == x)
+                        {
+                          bucket [x] [bucketIndex] = numArray [index];
+                          bucketIndex++;
+                        }
+                      }
+                    }
+
+                    //sorts buckets again using the next digit from the left and returns a final array after all recursive calls
+                    for (int x = 9; x >= 0; x--)
+                    {
+                      int[] tempArray;
+                      tempArray = sortArray (bucket [x], exponentOfTen - 1);
+                      for (int index = tempArray.length - 1; index >= 0; index--)
+                      {
+                        //store elements from tempArray into newNumArray
+                        if (tempArray [index] != 0 && newArrayIndex >= 0)
+                        {
+                          newNumArray [newArrayIndex] = tempArray [index];
+                          newArrayIndex--;
+                        }
+                      }
+                    }
+                    return newNumArray;
+                  } else
+                    {
+                        return numArray;
+                    }
                 }
-              }
             }
           </code>
         </pre>

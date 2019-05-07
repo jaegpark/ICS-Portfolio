@@ -67,15 +67,16 @@
       <h3>Instantiating</h3>
       <br>
       <p>
-        To instantiate an array in Java, you must create an array using the "new" operator. As well,
+        To instantiate an array in Java, you must create a new array object using the "new" operator. As well,
         you will need to specify the size of the array. Note that in Java, you cannot alter the size
-        of an array directly.
+        of an array once created. You can however, redirect the varaible's object reference to a new array of a
+        different size.
       </p>
       <br>
       <p>
-        As well, there is also an alternate form of creating a new array. This method involves listing every element
-        inside a list, separated by commas, surrounded by braces {}. Note: the data types of each element must
-        be consistent. The following are examples of the two ways to create an array:
+        Additionally, there is also an alternate form of creating a new array. This method involves listing every element
+        inside a list, separated by commas, surrounded by braces {}. This is called an initializer list.
+        Note: the data types of each element must be consistent. The following are examples of the two ways to create an array:
       </p>
       <p>
         <br>
@@ -228,9 +229,26 @@
       <h3>Brief Overview</h3>
       <br>
       <p>
-
+        Think of 2d arrays as an array of arrays. Yes, you read that right. That's pretty much it! 2-D arrays are treated
+        a very similar way when traversing and instantiating.
       </p>
-
+      <br>
+      <h3>Declaration and Initialization</h3>
+      <br>
+      <p>
+        The declaration and initialization of a 2-D array is very similar to 1-D arrays. Instead of having one set of [],
+        you need two to indicate that it is 2-D. As well, there must be two size specifications. Take a look:
+      </p>
+      <br>
+      <p>
+        <pre>
+          <code>
+            int [] [] 2dArray1 = new int [10][20];      // this makes a new 2d array object of size 10 rows by 20 columns
+            double 2dArray2 [] [] = new int [15][25];   // this makes a new 2d array object of size 15 rows by 20 columns
+            char [] [] 2dArray3 = {{'a','b','c'}, {'d','e','f'}, {'g','h','i'}};  // this uses an initializer list to declare a 3x3 array.
+          </code>
+        </pre>
+      </p>
     </article>
 
     <!--START OF ARRAYLISTS-->
