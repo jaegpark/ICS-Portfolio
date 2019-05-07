@@ -102,3 +102,8 @@ nav ul li ul li a{
 nav ul li ul li a:hover{
   background-color: #F3F3F3;
 }
+
+main article p a{
+  text-decoration:none;
+  color: white;
+}

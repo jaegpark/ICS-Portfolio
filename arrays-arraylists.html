@@ -249,6 +249,30 @@
           </code>
         </pre>
       </p>
+      <br>
+      <h3>Traversal</h3>
+      <br>
+      <p>
+        When traversing through a 2-D array, there must be two for loops: one to traverse the rows, and one to traverse the
+        columns.
+      </p>
+      <br>
+      <p>
+        Let's look at the code:
+        <pre>
+          public class 2DArray{
+
+            public static void main(String [] args){
+              int [][] array = new int [10][20];
+              for (int i = 0; i < array.length; i++){
+                for (int j = 0; j < array[0].length; j++){
+
+                }
+              }
+            }
+          }
+        </pre>
+      </p>
     </article>
 
     <!--START OF ARRAYLISTS-->
@@ -281,7 +305,13 @@
     <p>
       In essence, you could treat an ArrayList as an array, but with enhanced capabilities.
       Some of these include a dynamic size and practical methods. Overall, you can look at them
-      as dynamic arrays.
+      as dynamic arrays. The advantages of ArrayLists compared to arrays are:
+      <br>
+      <ul>
+        <li>The ArrayList size increases/decreases based on how much space the program needs to use</li>
+        <li>The last element of an ArrayList is always at the index list.size()-1, unlike an array (which must be manually tracked)</li>
+        <li>Shifting of elements when something is removed/added at a specific index is automatic, unlike arrays.</li>
+      </ul>
     </p>
     <br>
     <p>
