@@ -599,7 +599,7 @@
       <br>
       <p>
       Let's look at an example of an interface being implemented:
-      <pre>
+        <pre>
           <code>
             public interface Pet{
               public void makeNoise();
@@ -633,12 +633,14 @@
       <p>
         When you learned about inheritance, you may have realized in the shown example that you could call an instance of Dog a Pet,
         similarly, an instance of Cat a Pet. It is this ability for objects to take on many forms/names, which we call polymorphism.
+        In Java, there are two times where we can see polymorphism: in compile time, and run time.
       </p>
       <br>
+      <h4><u>Run Time Polymorphism</u></h4>
+      <br>
       <p>
-        The general rule of thumb to determine if something is polymorphic, is to see if it has more than one "is-a" relationship
-        with other classes. Technically, in Java, all objects extend the Object class, so every object in Java is polymorphic (is-a relationship
-        with itslef, and with Object).
+        Run time polymorphism, or otherwise called dynamic binding, or overriding, is when the call for something in Java is NOT
+        done through the compiler. This can be achieved by having the same method header in a class and a subclass.
       </p>
       <br>
       <p>
@@ -695,7 +697,18 @@
       <p>
         In conclusion, we can say that the action the makeNoise() method performed was based on the type of object
         it was called on. NOT the type of object reference. It is an example of polymorphism, because this example
-        demonstrated
+        demonstrates
+      </p>
+      <br>
+      <h4><u>Compile Time Polymorphism</u></h4>
+      <br>
+      <p>
+        In compile-time, the call to whatever is being invoked in Java will be resolved by the compiler. Other definitions for
+        compile time polymorphsm is overloading, and static binding. This is achieved by overloading methods in Java.
+      </p>
+      <br>
+      <p>
+
       </p>
       <br><br>
     </article>
