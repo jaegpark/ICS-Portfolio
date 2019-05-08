@@ -531,12 +531,21 @@
           </code>
         </pre>
         will run without error. To find the feed() method, Java, during runtime, will go through the object's class' heirarchy to
-        look for the first method found with the same name. If one is not found, a SOMETHINGSOMETHING exception will be thrown.
+        look for the first method found with the same name. This is explained in more detail later on in polymorphism.
       </p>
       <br>
       <p>
         Note: a subclass can also be a superclass to another subclass. There is no limit on the length of this inheritance/heirarchy tree.
         Just remember that the class at the bottom of this inheritance will inherit EVERYTHING.
+      </p>
+      <br>
+      <h4><u>super</u></h4>
+      <br>
+      <p>
+        super is a reserved keyword in Java, that is often used to refer the instance variable of the immediate superclass. This
+        means it can act as an identifier when calling the superclass' methods.
+        As well, super() is often used in place of the immediate parent class' constructor. The corresponding constructor will depend
+        on the parameters given to super().
       </p>
       <br><br>
     </article>
@@ -685,7 +694,8 @@
       <br>
       <p>
         In conclusion, we can say that the action the makeNoise() method performed was based on the type of object
-        it was called on. It is an example of polymorphism, because
+        it was called on. NOT the type of object reference. It is an example of polymorphism, because this example
+        demonstrated
       </p>
       <br><br>
     </article>
@@ -717,16 +727,25 @@
             <th>Procedural Programming</th>
           </tr>
           <tr>
-            <td>based on objects of classes</td>
-            <td>based on ordered procedures/methods</td>
+            <td>based on objects and classes</td>
+            <td>based on ordered procedures/methods (top-down design)</td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
+            <td>code is often reused</td>
+            <td>limited code reusage</td>
+          </tr>
+          <tr>
+            <td>protected data</td>
+            <td>global data oriented</td>
+          </tr>
+          <tr>
+            <td>complex design of program</td>
+            <td>complex code in program</td>
           </tr>
         </table>
       </center>
     </p>
+    <br><br>
     </article>
     <!--Don't fear the oop assignment example starts here-->
     <article>
