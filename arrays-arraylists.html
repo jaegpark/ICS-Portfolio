@@ -196,8 +196,9 @@
       </p>
       <br>
       <p>
-        It is important to note, that foreach loops cannot alter the original contents of the array, without other
-        helper methods. For example, the following code will NOT change the original array:
+        It is important to note, that foreach loops cannot alter the original contents of the array when dealing with primitive data types.
+        However, when storing objects in an array (non-primitive), it is possible to mutate attributes of the object using helper methods.
+        For example, the following code will NOT change the values inside the original array:
       </p>
       <br>
       <p>
@@ -216,6 +217,23 @@
                 }
               }
             }
+          </code>
+        </pre>
+        <br>
+      </p>
+      <br><br>
+      <h3>Passing in arrays as Parameters</h3>
+      <br>
+      <p>
+        It is important to remember that an array is an object. This means that when an array is passed in as a parameter,
+        its object reference is being passed in. This means that this method can access and alter the original array.
+      </p>
+      <br>
+      <p>
+        For example:
+        <pre>
+          <code>
+            
           </code>
         </pre>
       </p>
