@@ -33,7 +33,7 @@ main{
 
 pre.prettyprint {
   display: block;
-  background-color: rgba(245,245,245,0.8);
+  background-color: #f8f8f8;
 
 }
 .format ul{

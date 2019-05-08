@@ -256,7 +256,7 @@
         Think of 2d arrays as an array of arrays. Yes, you read that right. That's pretty much it! 2-D arrays are treated
         a very similar way when traversing and instantiating.
       </p>
-      <br>
+      <br><br>
       <h3>Declaration and Initialization</h3>
       <br>
       <p>
@@ -278,7 +278,7 @@
         To access specific array elements, two index indicators must be used: one for row number and one for column (i.e.
         arrayName[i][j] would be the reference variable for the element in the i+1th row, and the j+1th row). Remember that indicies start at 0!
       </p>
-      <br>
+      <br><br>
       <h3>Traversal</h3>
       <br>
       <p>
@@ -305,7 +305,7 @@
         <br>
         This sets initial values of the array from 0 to 50, from left to right.
       </p>
-      <br>
+      <br><br>
       <h3>The foreach loop</h3>
       <br>
       <p>
@@ -374,7 +374,7 @@
     <p>
 
     </p>
-    <br>
+    <br><br>
     <h3>Declaration</h3>
     <br>
     <p>
@@ -446,14 +446,51 @@
         </code>
       </pre>
     </p>
+    <br><br>
+    <h3>List < E > Interface</h3>
     <br>
     <p>
-      It turns out that these are doing the same thing, by instantiating a new ArrayList.
-      However, there is a distinct difference between these two methods.
-      In
+      The List < E > Interface provides to classes that implement it, to hold a list of
+      type E elements. There are certain key aspects of the List < E > Interface, such as its
+      important methods, which will be discussed.
     </p>
+    <br>
+    <p>
+      <ul>
+        <li>int size() will return the size of the list</li>
+        <li>E get(int index) will return the element at that index</li>
+        <li>E set(int index, E item) will replace the current item at index with the new item</li>
+        <li>E remove(int index) will remove the element at that index, and decreases the index value of the right-side elements by 1</li>
+        <li>boolean add(E element) will add the new element to the end of the list, and return true if the list was modified</li>
+        <li>void add(int index, E element) will add the new element at the specified index, and increase the index value of the right-side elements by 1</li>
+      </ul>
+    </p>
+    <br><br>
+    <h3>Traversal</h3>
+    <p>
+      Here is an example of traversing an array:
+      <pre>
+        <code>
+          public class ArraylistDemos{
+            public static boolean findElement(ArrayList< String > list, String flag){
+              for(int i = 0; i < list.size(); i++){
+                if (list.get(i).equals(flag)) return true;
+              }
+              return false;
+            }
+          }
+        </code>
+      </pre>
+      <br>
+    </p>
+    <br><br>
+    <h3>The foreach loop</h3>
+    <br>
+    <p>
+      When using a foreach loop for ArrayLists, its syntax is literally the same as using a foreach loop for an array.
+    </p>
+    <br><br>
     </article>
-
   </main>
 
 </body>
