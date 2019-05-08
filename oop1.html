@@ -10,6 +10,7 @@
     <link href="style.css" rel="stylesheet" type="text/css">
     <meta charset="UTF-8">
     <meta name="description" content="OOP">
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
     <title>ICS4U0 - OOP</title>
   </head>
 
@@ -76,7 +77,7 @@
       </p>
       <br>
       <p>
-        <pre>
+        <pre class="prettyprint">
           <code>
             public class Cat{   // note that it is a convention to capitalize names of classes, and camel-case all names.
               String name;
@@ -708,17 +709,122 @@
       </p>
       <br>
       <p>
+        Here is an example of overloading methods. Overloaded methods have the same method signature, but have different parameter passes:
+        <pre>
+          <code>
+            public class CompileTimeDemo{
 
+              public static void doSomething(){
+                System.out.println("did something");
+              }
+
+              public static void doSomething(int n){
+                System.out.println("did something with "+ n);
+              }
+
+              public static void doSomething(String s){
+                System.out.println("did something with the String "+s);
+              }
+
+              public static void main(String [] args){
+                doSomething();
+                doSomething(4);
+                doSomething("hello");
+              }
+            }
+          </code>
+        </pre>
+        <br>
+        When the main method executes, the compiler will find the correct method call and resolve it based on the given parameters.
+      </p>
+      <br>
+      <h4><u>Upcasting and Downcasting</u></h4>
+      <br>
+      <p>
+        Just like casting primitive datatypes when doing operations, Java can upcast/downcast objects when they are part of the same class
+        hierarchy.
+      </p>
+      <br>
+      <p>
+        Upcasting is casting something to a supertype, or the type of the superclass. This type of casting is always allowed without causing an error, and is
+        automatic in Java.
+        This is because of the polymorphic properties of the subclass. The subclass of a superclass can always take on the reference label of the superclass.
+      </p>
+      <br>
+      <p>
+        Downcasting is casting a supertype down to its subtype. Unlike upcasting, this action is not always allowed, and often needs a type check.
+        If the downcast was unsuccesful, a ClassCastException can be thrown. To avoid this, the instanceOf operator is often used to check if the
+        cast conversion is possible.
+      </p>
+      <br>
+      <p>
+        To use a method from the superclass, you can simply use the super.method() syntax, or do an upcast
+        To use a method from the subclass, a downcast must be performed, using the instanceOf operator.
+      </p>
+      <br>
+      <p>
+        Let's take a look at the code example below:
+        <pre>
+          <code>
+            public class Person{
+              public void saySomething(){
+                System.out.println("This is from the Person class");
+              }
+            }
+
+            public class Student extends Person{
+              public void saySomething(){
+                System.out.println("This is from the Student class");
+              }
+
+              public void saySomethingAgain(){
+                System.out.println("This is from the second method in Student class");
+              }
+            }
+
+            public class PeopleTester{
+              public static void main(String [] args){
+
+                Student upStudent = new Student();
+                Person studentPerson = (Person) upStudent;  // explicitly done. However, Person studentPerson = upStudent;
+                                                            // would have automatically upcasted.
+
+                // valid downcasting
+                Person person = new Student();    // person's runtime type is Student
+                Student studentPerson = (Student) person; /
+
+                // illegal downcasting
+                Person person2 = new Person();  // person2's runtime type is a Person.
+                Student failedStudent = (Student) person2;  // The Person class does not have a "is-a" relationship with the Student class.
+                                                            // a Person is not always a Student.
+
+                // when performing a method from the subclass
+                Person p1 = somePerson(); // somePerson() returns a subclass of Person.
+                if (p1 instanceof Student) {
+                    Student newStudent = (Student) p1;
+                }
+              }
+            }
+          </code>
+        </pre>
       </p>
       <br><br>
     </article>
     <!-- heirarchy trees -->
     <article>
-      <h3>Heirarchy trees</h3>
+      <h3>Hierarchy trees</h3>
       <br><hr><br>
       <p>
-        When describing class relationships in Java, there is a very useful diagram to use, called a class heirarchy tree.
-        In heirarchy trees, classes are surrounded by rectangles, and have arrows demonstrating their relationships with each other.
+        When describing class relationships in Java, there is a very useful diagram to use, called a class hierarchy tree.
+        In hierarchy trees, classes are surrounded by rectangles, and have arrows demonstrating their relationships with each other.
+      </p>
+      <br>
+      <p>
+        <center>Here's an example of a class hierarchy tree:</center>
+        <br>
+        <center><a href="https://i.stack.imgur.com/Lkn0S.png" target="_blank"><img src="tree.png" alt="An image of an animal hierarchy"/></a></center>
+        <br>
+        <center>Click the image to go to the source</center>
       </p>
       <br><br>
     </article>
