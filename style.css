@@ -34,8 +34,13 @@ main{
 pre.prettyprint {
   display: block;
   background-color: #f8f8f8;
-
 }
+
+pre.segment{
+  display:contents;
+  color:red;
+}
+
 .format ul{
   list-style: none;
 }
