@@ -107,7 +107,9 @@ main article p a{
   text-decoration:none;
   color: white;
 }
-
+footer{
+  display:block;
+}
 .footer{
   position: absolute;
   bottom: 0;
@@ -124,4 +126,20 @@ main article p a{
     margin: 10px;
     padding: 10px;
     height: 100%;
+}
+.mt-auto {
+    margin-top: auto!important;
+}
+.py-3 {
+    padding-bottom: 1rem!important;
+}
+.pt-3, .py-3 {
+    padding-top: 1rem!important;
+}
+
+img{
+  border: 0;
+  vertical-align: middle;
+  max-height: 100%;
+    max-width: 100%;
 }
