@@ -5,6 +5,7 @@
     <link href="style.css" rel="stylesheet" type="text/css">
     <meta charset="UTF-8">
     <meta name="description" content="Arrays and ArrayLists">
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
     <title>ICS4U0 - Arrays and ArrayLists</title>
   </head>
 
@@ -80,7 +81,7 @@
       </p>
       <p>
         <br>
-        <pre>
+        <pre class="prettyprint">
           <code>
           // 1 - using the new operator
           arrayDataType [] theNameOfTheArrayReference = new arrayDataType[sizeOfArray];
@@ -88,7 +89,7 @@
           // this will make the reference varaible, theNameOfTheArrayReference, point
           //    to the newly made array in computer memory
 
-          //2 - using a given list
+          //2 - using an initializer list
           arrayDataType[] theNameOfTheArrayReference2 = {element1, element2, ... elementn};
           // this will do the exact same thing as method 1 for the array object
           // this method is often used when there is a pre-made list that is to be used in the program.
@@ -106,15 +107,15 @@
       </p>
       <br>
       <p>
-        <pre>
+        <pre class="prettyprint">
           <code>
-          //1
-          String [] stringArray = new String[10];
-          //2
-          double [] doubleArray = new double[15];
-          //3
-          char [] charArray = {'A','B','C'};
-        </code>
+            // array of Strings
+            String [] stringArray = new String[10];
+            // array of doubles
+            double [] doubleArray = new double[15];
+            // array of characters
+            char [] charArray = {'A','B','C'};
+          </code>
         </pre>
       </p>
       <br>
@@ -153,7 +154,7 @@
       </p>
       <br>
       <p>
-        <pre>
+        <pre class="prettyprint">
           <code>
           public class SumExemplar{
             public static void main(String [] args){
@@ -167,8 +168,7 @@
 
               System.out.println(total + " is the sum of all the numbers");
             }
-          }
-        </code>
+          }</code>
         </pre>
       </p>
       <br><br>
@@ -181,7 +181,7 @@
       </p>
       <br>
       <p>
-        <pre>
+        <pre class="prettyprint">
           <code>
             public class ForeachTest{
               public static void main(String [] args){
@@ -190,8 +190,7 @@
                   System.out.println(value):
                 }
               }
-            }
-          </code>
+            }</code>
         </pre>
       </p>
       <br>
@@ -202,7 +201,7 @@
       </p>
       <br>
       <p>
-        <pre>
+        <pre class="prettyprint">
           <code>
             public class Foreachdemo{
               public static void main(String [] args){
@@ -216,8 +215,7 @@
                   System.out.println(list[i]);
                 }
               }
-            }
-          </code>
+            }  </code>
         </pre>
         <br>
       </p>
@@ -231,14 +229,14 @@
       <br>
       <p>
         For example:
-        <pre>
+        <br>
+        <pre class="prettyprint">
           <code>
             public static void addTwos(int [] array){
               for(int i = 0; i < array.length; i++){
                 array[i] += 2;
               }
-            }
-          </code>
+            }  </code>
         </pre>
         <br>
         would end up incrementing all the values in the array by 2.
@@ -265,12 +263,11 @@
       </p>
       <br>
       <p>
-        <pre>
+        <pre class="prettyprint">
           <code>
             int [] [] 2dArray1 = new int [10][20];      // this makes a new 2d array object of size 10 rows by 20 columns
             double 2dArray2 [] [] = new int [15][25];   // this makes a new 2d array object of size 15 rows by 20 columns
-            char [] [] 2dArray3 = {{'a','b','c'}, {'d','e','f'}, {'g','h','i'}};  // this uses an initializer list to declare a 3x3 array.
-          </code>
+            char [] [] 2dArray3 = {{'a','b','c'}, {'d','e','f'}, {'g','h','i'}};  // this uses an initializer list to declare a 3x3 array</code>
         </pre>
       </p>
       <br>
@@ -288,7 +285,9 @@
       <br>
       <p>
         Let's look at the code:
-        <pre>
+        <br><br>
+        <pre class="prettyprint">
+          <code>
           public class 2DArray{
             public static void main(String [] args){
               int [][] array = new int [5][10];
@@ -300,7 +299,7 @@
                 }
               }
             }
-          }
+          }</code>
         </pre>
         <br>
         This sets initial values of the array from 0 to 50, from left to right.
@@ -311,7 +310,8 @@
       <p>
         It is slightly different when using a foreach loop for a 2-D array. We need to use one foreach loop to hold the array value of the
         rows, while using another foreach loop to access these values inside each array. Take a look:
-        <pre>
+        <br><br>
+        <pre class="prettyprint">
           <code>
             public class Foreach2DTester{
               public static void main(String [] args){
@@ -322,8 +322,7 @@
                   }
                 }
               }
-            }
-          </code>
+            }  </code>
         </pre>
         <br>
         <p>
@@ -350,12 +349,11 @@
       </p>
       <br>
       <p>
-        <pre>
+        <pre class="prettyprint">
           <code>
             import java.util.ArrayList;
             // alternatively,
-            import java.util.*;
-          </code>
+            import java.util.*;  </code>
         </pre>
       </p>
     <br>
@@ -393,7 +391,7 @@
     </p>
     <br>
     <p>
-      <pre>
+      <pre class="prettyprint">
         <code>
           ArrayList < E > nameOfArrayListObject;
           // where E is the data type
@@ -414,7 +412,7 @@
     </p>
     <br>
     <p>
-      <pre>
+      <pre class="prettyprint">
         <code>
           // this first method of creating an ArrayList constructs an empty ArrayList with an
           //  initial capacity of size 10.
@@ -439,7 +437,7 @@
     </p>
     <br>
     <p>
-      <pre>
+      <pre class="prettyprint">
         <code>
           List < Integer > list1 = new ArrayList< >();
           ArrayList < Integer > list2 = new ArrayList< >();
@@ -469,7 +467,7 @@
     <h3>Traversal</h3>
     <p>
       Here is an example of traversing an array:
-      <pre>
+      <pre class="prettyprint">
         <code>
           public class ArraylistDemos{
             public static boolean findElement(ArrayList< String > list, String flag){
