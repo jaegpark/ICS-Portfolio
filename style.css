@@ -36,9 +36,10 @@ pre.prettyprint {
   background-color: #f8f8f8;
 }
 
-pre.segment{
-  display:contents;
-  color:red;
+code.segment{
+  font-size: 87.5%;
+    color: #e83e8c;
+    word-break: break-word;
 }
 
 .format ul{

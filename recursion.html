@@ -42,6 +42,18 @@
       </p>
       <br>
       <p>
+        For a problem to be solved by a recursive function, it must be:
+      </p>
+      <br>
+      <p>
+        <ol>
+          <li>There must be a to break down the problem into smaller tasks.</li>
+          <li>There must be a "base case" to identify when the recursive call stops.</li>
+          <li>There must be a way to combine the smaller parts into a large part, ending with the answer.</li>
+        </ol>
+      </p>
+      <br>
+      <p>
         In this tutorial, I will be explaining what base cases are, tail recursion, and a few examples.
       </p>
       <br>
@@ -58,18 +70,25 @@
 
       </p>
       <br>
-      <h3>Tail Recursion </h3>
+      <h3>Types of Recursion</h3>
       <br>
+      <h4><u>Tail Recursion</u></h4>
       <p>
-        
+        Tail recursion is very similar to single method recursion, but it involves putting the recursive call at the end of the method.
+        This means that there are no calculations performed after the return of the recursive call.  
       </p>
       <br>
-      <h3>Mutual Recursion</h3>
+      <h4><u>Mutual Recursion</u></h4>
+      <br>
+      <p>
+        Mutual recursion is when two methods are defined in terms of each other, until one terminates.
+      </p>
+      <br><br>
+      <h3>Iteration vs Recursion</h3>
       <br>
       <p>
 
       </p>
-      <br>
       <h3>Example Application: Factorial</h3>
       <br>
       <p>
