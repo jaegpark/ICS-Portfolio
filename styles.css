@@ -119,6 +119,6 @@ main table tr td a img{
   float: right;
 }
 
-img:hover{
+main table tr td a img:hover{
   opacity: 0.5;
 }
