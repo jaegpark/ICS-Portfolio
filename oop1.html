@@ -413,7 +413,7 @@
       <br><hr><br>
       <p>
         In Java, a class can have a direct relationship with another class, by extending it. Using the extends keyword,
-        a class can extend another class, inheriting all of its attributes and behaviours (its varaibles and methods).
+        a class can extend another class, inheriting all of its attributes and behaviours (its variables and methods).
         This is what we call inheritance. This is useful when creating many classes that will interact with each other in
         a full program. Let's look at an example below:
       </p>
@@ -537,12 +537,12 @@
             dog1.feed();  </code>
         </pre>
         <br>
-        will run without error. To find the feed() method, Java, during runtime, will go through the object's class' heirarchy to
+        will run without error. To find the feed() method, Java, during runtime, will go through the object's class' hierarchy to
         look for the first method found with the same name. This is explained in more detail later on in polymorphism.
       </p>
       <br>
       <p>
-        Note: a subclass can also be a superclass to another subclass. There is no limit on the length of this inheritance/heirarchy tree.
+        Note: a subclass can also be a superclass to another subclass. There is no limit on the length of this inheritance/hierarchy tree.
         Just remember that the class at the bottom of this inheritance will inherit EVERYTHING.
       </p>
       <br>
@@ -616,8 +616,8 @@
         <pre class="prettyprint">
           <code>
             public interface Pet{
-              public void makeNoise();      // the code is not actually written
-              public void eat();            // for inteface methods
+             void makeNoise();      // the code is not actually written
+             void eat();            // for interface methods. As well, they are by default public.
             }
 
             public class Dog implements Pet{
@@ -748,7 +748,7 @@
           </code>
         </pre>
         <br>
-        When the main method executes, the compiler will find the correct method call and resolve it based on the given parameters.
+        Before the main method executes, the compiler will find the correct method call and resolve it based on the given parameters.
       </p>
       <br>
       <h4><u>Upcasting and Downcasting</u></h4>
