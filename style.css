@@ -33,6 +33,7 @@ main{
 pre.prettyprint {
   display: block;
   background-color: #f8f8f8;
+  white-space:pre-wrap;
 }
 
 code.segment{
