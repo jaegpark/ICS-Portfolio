@@ -34,10 +34,10 @@
 
   <main>
     <!--START OF ARRAYS-->
-    <h2>Arrays</h2>
+    <h1>Arrays</h1>
     <br><hr><br>
     <article>
-      <h3>Brief Overview</h3>
+      <h2>Brief Overview</h2>
       <br>
       <p>
         In Java, there is a very useful tool and data structure called an array. In essence, an array is
@@ -50,7 +50,7 @@
         In this tutorial, I will show you how to declare, instantiate, and manipulate arrays.
       </p>
       <br><br>
-      <h3>Declaration</h3>
+      <h2>Declaration</h2>
       <br>
       <p>
          In Java, to easily manipulate arrays in a program, you must create a new reference variable. During this declaration, you will also need to
@@ -65,7 +65,7 @@
         Although both ways work, note that the first method is often preferred to make code look cleaner.
       </p>
       <br><br>
-      <h3>Instantiating</h3>
+      <h2>Instantiating</h2>
       <br>
       <p>
         To instantiate an array in Java, you must create a new array object using the "new" operator. As well,
@@ -92,8 +92,7 @@
           //2 - using an initializer list
           arrayDataType[] theNameOfTheArrayReference2 = {element1, element2, ... elementn};
           // this will do the exact same thing as method 1 for the array object
-          // this method is often used when there is a pre-made list that is to be used in the program.
-        </code>
+          // this method is often used when there is a pre-made list that is to be used in the program.</code>
         </pre>
       </p>
       <br>
@@ -114,12 +113,11 @@
             // array of doubles
             double [] doubleArray = new double[15];
             // array of characters
-            char [] charArray = {'A','B','C'};
-          </code>
+            char [] charArray = {'A','B','C'}; </code>
         </pre>
       </p>
       <br>
-      <h3>Traversal</h3>
+      <h2>Traversal</h2>
       <br>
       <p>
         In Java, an element/value inside an array is accessed using the following syntax: theNameOfTheArrayReference[index],
@@ -172,7 +170,7 @@
         </pre>
       </p>
       <br><br>
-      <h3>The foreach Loop - Array</h3>
+      <h2>The foreach Loop - Array</h2>
       <br>
       <p>
         The foreach loop, or otherwise called an enhanced for loop, is a form of for loop
@@ -220,7 +218,7 @@
         <br>
       </p>
       <br><br>
-      <h3>Passing in arrays as Parameters</h3>
+      <h2>Passing in arrays as Parameters</h2>
       <br>
       <p>
         It is important to remember that an array is an object. This means that when an array is passed in as a parameter,
@@ -245,17 +243,17 @@
 
     <!--START OF 2D ARRAYS-->
     <br><br>
-    <h2>2-D Arrays</h2>
+    <h1>2-D Arrays</h1>
     <br><hr><br>
     <article>
-      <h3>Brief Overview</h3>
+      <h2>Brief Overview</h2>
       <br>
       <p>
         Think of 2d arrays as an array of arrays. Yes, you read that right. That's pretty much it! 2-D arrays are treated
         a very similar way when traversing and instantiating.
       </p>
       <br><br>
-      <h3>Declaration and Initialization</h3>
+      <h2>Declaration and Initialization</h2>
       <br>
       <p>
         The declaration and initialization of a 2-D array is very similar to 1-D arrays. Instead of having one set of [],
@@ -276,7 +274,7 @@
         arrayName[i][j] would be the reference variable for the element in the i+1th row, and the j+1th row). Remember that indicies start at 0!
       </p>
       <br><br>
-      <h3>Traversal</h3>
+      <h2>Traversal</h2>
       <br>
       <p>
         When traversing through a 2-D array, there must be two for loops: one to traverse the rows, and one to traverse the
@@ -305,7 +303,7 @@
         This sets initial values of the array from 0 to 50, from left to right.
       </p>
       <br><br>
-      <h3>The foreach Loop - 2D Array</h3>
+      <h2>The foreach Loop - 2D Array</h2>
       <br>
       <p>
         It is slightly different when using a foreach loop for a 2-D array. We need to use one foreach loop to hold the array value of the
@@ -333,10 +331,10 @@
 
     <!--START OF ARRAYLISTS-->
     <br><br>
-    <h2>ArrayLists</h2>
+    <h1>ArrayLists</h1>
     <br><hr><br>
     <article>
-      <h3>Brief Overview</h3>
+      <h2>Brief Overview</h2>
       <br>
       <p>
         Once you have mastered arrays, ArrayLists should come very easily for you.
@@ -361,19 +359,15 @@
       In essence, you could treat an ArrayList as an array, but with enhanced capabilities.
       Some of these include a dynamic size and practical methods. Overall, you can look at them
       as dynamic arrays. The advantages of ArrayLists compared to arrays are:
-      <br>
+      <br><br>
       <ul>
         <li>The ArrayList size increases/decreases based on how much space the program needs to use</li>
         <li>The last element of an ArrayList is always at the index list.size()-1, unlike an array (which must be manually tracked)</li>
         <li>Shifting of elements when something is removed/added at a specific index is automatic, unlike arrays.</li>
       </ul>
     </p>
-    <br>
-    <p>
-
-    </p>
     <br><br>
-    <h3>Declaration</h3>
+    <h2>Declaration</h2>
     <br>
     <p>
       The declaration of an ArrayList is slightly different than an array. Like an array,
@@ -393,16 +387,15 @@
     <p>
       <pre class="prettyprint">
         <code>
-          ArrayList &ltInteger&gt nameOfArrayListObject;
+          ArrayList&ltInteger&gt nameOfArrayListObject;
           // where E is the data type
 
           // ex1. An ArrayList of Integers
-          ArrayList&ltInteger&gt integerArrayList;
-        </code>
+          ArrayList&ltInteger&gt integerArrayList; </code>
       </pre>
     <p>
     <br><br>
-    <h3>Instantiation</h3>
+    <h2>Instantiation</h2>
     <br>
     <p>
       To instantiate an ArrayList, like an array, the "new" keyword must be used. This creates a new
@@ -414,19 +407,20 @@
     <p>
       <pre class="prettyprint">
         <code>
+          // note: E stands for a constant datatype
+
           // this first method of creating an ArrayList constructs an empty ArrayList with an
           //  initial capacity of size 10.
-          ArrayList< Datatype > nameOfList1 = new ArrayList< >();
+          ArrayList&ltE&gt nameOfList1 = new ArrayList&lt&gt();
 
           // the second method of creating an ArrayList contructs an ArrayList of a given size,
           //  in its parameters.
-          ArrayList< Datatype > nameOfList2 = new ArrayList< >(initialCapacity);
+          ArrayList&ltE&gt nameOfList2 = new ArrayList&lt&gt(initialCapacity);
 
           // the third method of creating an ArrayList constructs an ArrayList from a passed in
           //  Collection or any of its subclasses, of a data type which is a subclass of the data type
           //  of the ArrayList.
-          ArrayList< Datatype > nameOfList3 = new ArrayList< >(Collection <? extends Datatype> c);
-        </code>
+          ArrayList&ltE&gt nameOfList3 = new ArrayList&lt&gt(Collection &lt? extends E&gt c);  </code>
       </pre>
     </p>
     <br>
@@ -440,12 +434,11 @@
       <pre class="prettyprint">
         <code>
           List &ltInteger&gt list1 = new ArrayList&lt&gt();
-          ArrayList &ltInteger&gt list2 = new ArrayList&lt&gt();
-        </code>
+          ArrayList &ltInteger&gt list2 = new ArrayList&lt&gt();  </code>
       </pre>
     </p>
     <br><br>
-    <h3>List &ltE&gt Interface</h3>
+    <h2>List &ltE&gt Interface</h2>
     <br>
     <p>
       The List &ltE&gt Interface provides to classes that implement it, to hold a list of
@@ -464,7 +457,7 @@
       </ul>
     </p>
     <br><br>
-    <h3>Traversal</h3>
+    <h2>Traversal</h2>
     <br>
     <p>
       Here is an example of traversing an ArrayList:
@@ -478,13 +471,11 @@
               }
               return false;
             }
-          }
-        </code>
+          }  </code>
       </pre>
-      <br>
     </p>
     <br><br>
-    <h3>The foreach loop</h3>
+    <h2>The foreach loop - ArrayLists</h2>
     <br>
     <p>
       When using a foreach loop for ArrayLists, its syntax is almost identical as using a foreach loop for an array.
@@ -506,9 +497,7 @@
                 System.out.println(s);
               }
             }
-
-          }
-        </code>
+          }  </code>
       </pre>
     </p>
     <br><br>
