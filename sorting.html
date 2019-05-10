@@ -5,6 +5,7 @@
     <link href="style.css" rel="stylesheet" type="text/css">
     <meta charset="UTF-8">
     <meta name="description" content="Sorting">
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
     <title>ICS4U0 - Sorting</title>
   </head>
 
@@ -32,10 +33,10 @@
   </header>
 
   <main>
-    <h2>Sorting</h2>
+    <h1>Sorting</h1>
     <br><hr><br>
     <article>
-      <h3>What types of sorting?</h3>
+      <h2>Overview</h2>
       <br><hr><br>
       <p>
         In Java, there are a countless number of ways one could sort a list of items. In this tutorial, I will introduce
@@ -49,7 +50,7 @@
       <br>
     </article>
     <article>
-      <h3>Radix Sort</h3>
+      <h2>Radix Sort</h2>
       <br><hr><br>
       <h4><u>Overview</u></h4>
       <br>
@@ -78,7 +79,9 @@
       </p>
       <br>
       <p>
-        Radix sort's memory usage
+        Radix sort's worst case space complexity is O(w+n), where w is the number of bits required to store each key, and n is the
+        number of elements. However, when considering the MSD implementation shown below, the space complexity will actually be greater,
+        since we are using buckets within buckets.
       </p>
       <br>
       <h4><u>Applications</u></h4>
@@ -104,8 +107,11 @@
       </p>
       <br>
       <p>
-        Let's take a look at the code implementation of the MSD sort.
-        <pre>
+        Let's take a look at the code implementation of the MSD algorithm.
+      </p>
+      <br>
+      <p>
+        <pre class="prettyprint">
           <code>
             // By: Rohan Krishna, Jae Park and Noam Silverman
 
@@ -195,17 +201,16 @@
                         return numArray;
                     }
                 }
-            }
-          </code>
+            }  </code>
         </pre>
       </p>
       <br>
       <p>
-        Now let's look at the code implementation for the LSD method.
+        Now let's look at the code implementation for the LSD algorithm.
       </p>
       <br>
       <p>
-        <pre>
+        <pre class="prettyprint">
           <code>
             public class leastSignificant
             {
@@ -275,8 +280,7 @@
                         return numArray;
                     }
                 }
-            }
-          </code>
+            }  </code>
         </pre>
       </p>
       <br>
