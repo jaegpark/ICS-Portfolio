@@ -33,8 +33,8 @@
   </header>
 
   <main>
+    <h1>Recursion</h1>
     <article>
-      <h2>Recursion</h2>
       <br><hr><br>
       <p>
         In Java, recursion is the repeated application of a certain method. In essence, when the method is called once, the method
@@ -58,22 +58,23 @@
         In this tutorial, I will be explaining what base cases are, tail recursion, and a few examples.
       </p>
       <br>
-      <h3>Base Cases</h3>
+      <h2>Base Cases</h2>
       <br>
       <p>
         In a recursive method, there is always a condition that must be met so that the method will not call itself forever!
         This is called the base case, and it often involves the passed in parameters reaching a certain point.
       </p>
       <br>
-      <h3>Stack Tracing</h3>
+      <h2>Stack Tracing</h2>
       <br>
       <p>
 
       </p>
       <br>
-      <h3>Types of Recursion</h3>
+      <h2>Types of Recursion</h2>
       <br>
       <h4><u>Tail Recursion</u></h4>
+      <br>
       <p>
         Tail recursion is very similar to single method recursion, but it involves putting the recursive call at the end of the method.
         This means that there are no calculations performed after the return of the recursive call.
@@ -85,7 +86,7 @@
         Mutual recursion is when two methods are defined in terms of each other, until one terminates.
       </p>
       <br><br>
-      <h3>Iteration vs Recursion</h3>
+      <h2>Iteration vs Recursion</h2>
       <br>
       <p>
         While recursion involves the method calling itself until meeting a base case,
@@ -95,13 +96,14 @@
         infinite recursive loops will crash the program, while infinite iterative cycles will consume more CPU power.
         The benefit of recursion over iterative style is that it keeps code short and concise.
       </p>
-      <h3>Example Application: Factorial</h3>
+      <br>
+      <h2>Example Application: Factorial</h2>
       <br>
       <p>
         Problem: design a program that will recursively calculate the factorial value for any given integer n.
         <br>
-        Solution: My solution can be found in the factorial(int n ) method. The demo value for n is 5.
-        <br>
+        Solution: My solution can be found in the factorial(int n) method. The demo value for n is 5.
+        <br><br>
         <pre class="prettyprint">
           <code>
             public class FactorialDemo{
@@ -114,8 +116,7 @@
               public static void main (String [] args){
                 System.out.println(factorial(5)); // this outputs 120
               }
-            }
-          </code>
+            }  </code>
         </pre>
         <br>
         For this solution, the stack trace would look like this:
@@ -137,14 +138,14 @@
         </pre>
       </p>
       <br>
-      <h3>Example Application : Maze</h3>
+      <h2>Example Application : Maze</h2>
       <br>
       <p>
         In my ICS4U0 class, we were given a 5x5 int array, where 0's represented paths and 1's represented walls.
         Possible entrances to the maze were on the left-most column or the top-most row, and any possible exits were
         on the right-most column and the bottom-most row. An entrance could not be an exit itself. We were asked to
         design a recursive solution. Here it is:
-        <br>
+        <br><br>
         <pre class="prettyprint">
           <code>
             /**
