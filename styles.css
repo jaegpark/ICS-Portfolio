@@ -122,3 +122,13 @@ main table tr td a img{
 main table tr td a img:hover{
   opacity: 0.5;
 }
+
+footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color:#212529;
+  font-family:'Work Sans',sans-serif;
+  font-weight:300;
+  font-size:10px;
+}
