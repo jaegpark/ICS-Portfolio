@@ -610,14 +610,13 @@
       <br>
         <pre class="prettyprint">
           <code>
-            <!-- TODO:  comment -->
             public interface Pet{
-              public void makeNoise();
-              public void eat();
+              public void makeNoise();      // the code is not actually written
+              public void eat();            // for inteface methods
             }
 
             public class Dog implements Pet{
-              public void makeNoise(){
+              public void makeNoise(){              // implements their own code for their own method
                 System.out.println("Woof");
               }
             }
@@ -661,21 +660,20 @@
       <p>
         <pre class="prettyprint">
           <code>
-            <!-- TODO: comment -->
             public class Toy{
-              public void makeNoise(){
+              public void makeNoise(){                        // the makeNoise() method in the Toy class
                 System.out.println("The toy made a noise!");
               }
             }
 
             public class Racecar extends Toy{
-              public void makeNoise(){
+              public void makeNoise(){                        // the overriden makeNoise() method in the Racecar class
                 System.out.println("The car went vroom!");
               }
             }
 
             public class PoliceCar extends Toy{
-              public void makeNoise(){
+              public void makeNoise(){                        // the overriden makeNoise() method in the PoliceCar class
                 System.out.println("The police car went bee-woo-bee-woo!");
               }
             }
@@ -683,12 +681,12 @@
             public class Driver1{
               public static void main(String [] args){
                 Toy toy1 = new Toy();
-                Toy toy2 = new Racecar();
-                Toy toy3 = new PoliceCar();
+                Toy toy2 = new Racecar();         // upcasted automatically
+                Toy toy3 = new PoliceCar();       // upcasted automatically
 
-                toy1.makeNoise();
-                toy2.makeNoise();
-                toy3.makeNoise();
+                toy1.makeNoise();     // will use the makeNoise() method in the Toy class
+                toy2.makeNoise();     // will use the makeNoise() method in the Racecar class
+                toy3.makeNoise();     // will use the makeNoise() method in the PoliceCar class
               }
             }
           </code>
@@ -707,8 +705,7 @@
       <br>
       <p>
         In conclusion, we can say that the action the makeNoise() method performed was based on the type of object
-        it was called on. NOT the type of object reference. It is an example of polymorphism, because this example
-        demonstrates <!-- TODO: FINISH !!! -->
+        it was called on. NOT the type of object reference.
       </p>
       <br>
       <h4><u>Compile Time Polymorphism</u></h4>

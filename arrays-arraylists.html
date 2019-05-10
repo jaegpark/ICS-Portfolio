@@ -172,7 +172,7 @@
         </pre>
       </p>
       <br><br>
-      <h3>The foreach loop</h3>
+      <h3>The foreach Loop - Array</h3>
       <br>
       <p>
         The foreach loop, or otherwise called an enhanced for loop, is a form of for loop
@@ -305,7 +305,7 @@
         This sets initial values of the array from 0 to 50, from left to right.
       </p>
       <br><br>
-      <h3>The foreach loop</h3>
+      <h3>The foreach Loop - 2D Array</h3>
       <br>
       <p>
         It is slightly different when using a foreach loop for a 2-D array. We need to use one foreach loop to hold the array value of the
@@ -393,11 +393,11 @@
     <p>
       <pre class="prettyprint">
         <code>
-          ArrayList < E > nameOfArrayListObject;
+          ArrayList &ltInteger&gt nameOfArrayListObject;
           // where E is the data type
 
           // ex1. An ArrayList of Integers
-          ArrayList< Integer > integerArrayList;
+          ArrayList&ltInteger&gt integerArrayList;
         </code>
       </pre>
     <p>
@@ -439,16 +439,16 @@
     <p>
       <pre class="prettyprint">
         <code>
-          List < Integer > list1 = new ArrayList< >();
-          ArrayList < Integer > list2 = new ArrayList< >();
+          List &ltInteger&gt list1 = new ArrayList&lt&gt();
+          ArrayList &ltInteger&gt list2 = new ArrayList&lt&gt();
         </code>
       </pre>
     </p>
     <br><br>
-    <h3>List < E > Interface</h3>
+    <h3>List &ltE&gt Interface</h3>
     <br>
     <p>
-      The List < E > Interface provides to classes that implement it, to hold a list of
+      The List &ltE&gt Interface provides to classes that implement it, to hold a list of
       type E elements. There are certain key aspects of the List < E > Interface, such as its
       important methods, which will be discussed.
     </p>
@@ -465,12 +465,14 @@
     </p>
     <br><br>
     <h3>Traversal</h3>
+    <br>
     <p>
-      Here is an example of traversing an array:
+      Here is an example of traversing an ArrayList:
+      <br><br>
       <pre class="prettyprint">
         <code>
           public class ArraylistDemos{
-            public static boolean findElement(ArrayList< String > list, String flag){
+            public static boolean findElement(ArrayList&ltString&gt list, String flag){
               for(int i = 0; i < list.size(); i++){
                 if (list.get(i).equals(flag)) return true;
               }
@@ -485,7 +487,29 @@
     <h3>The foreach loop</h3>
     <br>
     <p>
-      When using a foreach loop for ArrayLists, its syntax is literally the same as using a foreach loop for an array.
+      When using a foreach loop for ArrayLists, its syntax is almost identical as using a foreach loop for an array.
+      Here's a quick example:
+    </p>
+    <br>
+    <p>
+      <pre class="prettyprint">
+        <code>
+          public class ForeachListDemo{
+            public static void main(String [] args){
+              ArrayList&ltString&gt arr = new ArrayList&lt&gt();
+              arr.add("This");
+              arr.add("is");
+              arr.add("the");
+              arr.add("real");
+              arr.add("life.");
+              for(String s : arr){
+                System.out.println(s);
+              }
+            }
+
+          }
+        </code>
+      </pre>
     </p>
     <br><br>
     </article>
