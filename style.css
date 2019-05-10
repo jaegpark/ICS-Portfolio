@@ -5,8 +5,7 @@
 
 
 body{
-  background-image:url(icsBackground.png);
-  background: no-repeat center center cover;
+  background-color: white;
   background-attachment:fixed;
 }
 
@@ -15,11 +14,11 @@ nav{
   top:0px;
   width:100%;
   height: 60px;
-  background-color: white;
+  background-color: #212529;
 }
 
 main{
-  color:white;
+  color:#212529;
   font-family:'Work Sans',sans-serif;
   font-weight:300;
   font-size:16px;
@@ -67,7 +66,7 @@ nav p{
 
 nav p a{
   text-decoration: none;
-  color:black;
+  color:white;
 }
 
 nav ul{
@@ -82,8 +81,8 @@ nav ul li{
 
 nav ul li a{
   display:block;
-  font-family:arial;
-  color:#222;
+  font-family:'Work Sans',sans-serif;
+  color:white;
   font-size:14px;
   padding: 21px 14px;
   text-decoration: none;
@@ -92,7 +91,7 @@ nav ul li a{
 nav ul li ul{
   display:none;
   position:absolute;
-  background-color:white;
+  background-color:#212529;
   padding:10px;
   border-radius:0px 0px 4px 4px;
 }
@@ -111,5 +110,5 @@ nav ul li ul li a{
 }
 
 nav ul li ul li a:hover{
-  background-color: #F3F3F3;
+  background-color: #3d454c;
 }
