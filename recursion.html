@@ -65,10 +65,44 @@
         This is called the base case, and it often involves the passed in parameters reaching a certain point.
       </p>
       <br>
-      <h2>Stack Tracing</h2>
+      <h2>Stack Trace</h2>
       <br>
       <p>
-
+        In essence, a stack trace is a trace of method calls since the beginning of program execution. When a new method is called,
+        its call is added onto the top of the stack trace. Java will automatically generate and throw this when there has been a
+        StackOverflowError thrown by the JVM.
+      </p>
+      <br>
+      <p>
+        Programmers can also use this tool to easily find the source of their error. As well, a stack trace can be used to help
+        visualize the recursive function of a problem. Here is an example of a stack trace for the factorial method:
+      </p>
+      <br>
+      <p>
+        <pre class="prettyprint">
+          <code>
+            public static long factorial (int n){
+                if (n==0) return 1;
+                else
+                  return n * factorial(n-1);
+              }
+          </code>
+        </pre>
+        <br>
+        <pre>
+          factorial(5)
+            5 * factorial(4)
+              4 * factorial(3)
+                3 * factorial(2)
+                  2 * factorial(1)
+                    1 * factorial(0)
+                    1*1
+                  2 * 1
+                3 * 2
+              4 * 6
+            5 * 24
+          120
+        </pre>
       </p>
       <br>
       <h2>Types of Recursion</h2>
@@ -119,23 +153,6 @@
             }  </code>
         </pre>
         <br>
-        For this solution, the stack trace would look like this:
-        <br>
-        <br>
-        <pre>
-          factorial(5)
-            5 * factorial(4)
-              4 * factorial(3)
-                3 * factorial(2)
-                  2 * factorial(1)
-                    1 * factorial(0)
-                    1*1
-                  2 * 1
-                3 * 2
-              4 * 6
-            5 * 24
-          120
-        </pre>
       </p>
       <br>
       <h2>Example Application : Maze</h2>
