@@ -2,14 +2,15 @@
 <html>
   <head>
     <style>
-    table, td{
-      border: 1px solid white;
-    }
+      table, td{
+        border: 1px solid black;
+      }
     </style>
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:400" rel="stylesheet">
     <link href="style.css" rel="stylesheet" type="text/css">
     <meta charset="UTF-8">
     <meta name="description" content="Searching">
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
     <title>ICS4U0 - Searching</title>
   </head>
 
@@ -37,12 +38,12 @@
   </header>
 
   <main>
-    <h2>Searching</h2>
+    <h1>Searching</h1>
     <br><hr><br>
     <article>
       <p>
-        <h3>Intro</h3>
-        <br><hr><br>
+        <h2>Intro</h2>
+        <br>
         From what you've been taught in Java, there are many ways that one could make a list of items. But what if I needed to find
         a specific item in the list? In the future, you will most likely encounter such scenarios. In this tutorial, I am going to
         teach you two forms of searching: binary and sequential search.
@@ -50,7 +51,7 @@
     </article>
     <br>
     <article>
-      <h3>Sequential Search</h3>
+      <h2>Sequential Search</h2>
       <br><hr><br>
       <p>
         Sequential search, as complex as it may sound, is actually probably one of the first ways of searching you will think of.
@@ -63,8 +64,8 @@
         as a target value it searches for. They will return true if a matching number has been found. Else, they will return false.
         Note that the only difference between these two methods is that one will use a foreach loop to perform the search, while the other
         will use a regular array traversal.
-        <br>
-        <pre>
+        <br><br>
+        <pre class="prettyprint">
           <code>
             public class Sequentialsearchdemo{
 
@@ -109,8 +110,7 @@
                 System.out.println(binarySearch2(testList2, 100));  // will output false since 100 is not an element in testList2.
                 System.out.println(binarySearch3(testList3, -123)); // will output true since -123 is an element inside testList3.
               }
-            }
-          </code>
+            }  </code>
         </pre>
       </p>
       <br>
@@ -120,7 +120,7 @@
       </p>
       <br>
       <p>
-        <pre>
+        <pre class="prettyprint">
           <code>
             public class Genericsequentialdemo{
 
@@ -138,8 +138,7 @@
                 System.out.println(genericSequentialSort(stringArray, "jae"));  // will output true since "jae" is an element.
                 System.out.println(genericSequentialSort(integerList, 9));      // will output false since 9 is not an element.
               }
-            }
-          </code>
+            }  </code>
         </pre>
       </p>
       <br>
@@ -151,7 +150,7 @@
       <br><br>
     </article>
     <article>
-      <h3>Binary Search</h3>
+      <h2>Binary Search</h2>
       <br><hr><br>
       <p>
         Binary search, only works on lists that are sorted in some decreasing or increasing order. For the sake of demonstration, I
@@ -204,7 +203,7 @@
 
     <article>
       <p>
-        <h3>Conclusion</h3>
+        <h2>Conclusion</h2>
         <br><hr><br>
         Overall, these one of these two ways of seraching are very applicable in most situations.
         Let's do a final comparison:
@@ -228,7 +227,7 @@
         </table>
       </center>
       </p>
-      <br><br>
+      <br><br><br>
     </article>
   </main>
 
