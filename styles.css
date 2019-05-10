@@ -109,36 +109,16 @@ main article p a{
 footer{
   display:block;
 }
-.footer{
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-.links {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-end;
-    height: 50px;
-}
-.links > a {
-    margin: 10px;
-    padding: 10px;
-    height: 100%;
-}
-.mt-auto {
-    margin-top: auto!important;
-}
-.py-3 {
-    padding-bottom: 1rem!important;
-}
-.pt-3, .py-3 {
-    padding-top: 1rem!important;
-}
 
-img{
+main table tr td a img{
   border: 0;
   vertical-align: middle;
-  max-height: 100%;
-    max-width: 100%;
+  width:250px;
+  height:250px;
+  border: 2px solid white;
+  float: right;
+}
+
+img:hover{
+  opacity: 0.5;
 }
