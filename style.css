@@ -113,6 +113,9 @@ nav ul li ul li a:hover{
   background-color: #3d454c;
 }
 
+main article table tr td img{
+  max-width:100%;
+}
 
 footer{
   position: fixed;
